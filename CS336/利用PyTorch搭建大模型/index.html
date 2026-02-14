@@ -1379,25 +1379,27 @@
 <ul>
 <li>QS1: How long would it take to train a 70 Billion parameter model on 15 Trillion tokens on 1024 H100s?</li>
 <li><strong>公式</strong>：</li>
-<li>训练Transformer需要的FLOPs估算
-    $ \text{Total_FLOPS} = 6 \times P \times T $<ul>
+<li>训练Transformer需要的FLOPs估算<ul>
+<li><span class="arithmatex">\(\text{Total_FLOPS} = 6 \times P \times T\)</span></li>
 <li>P: number of parameters</li>
 <li>T: number of tokens</li>
 </ul>
 </li>
-<li>显卡集群的算力估算
-    $ \text{Cluster_Performance} = N \times Pk \times MFU $<ul>
+<li>显卡集群的算力估算<ul>
+<li><span class="arithmatex">\(\text{Cluster_Performance} = N \times Pk \times MFU\)</span></li>
 <li>N: number of GPUs</li>
 <li>Pk: Peak performance</li>
 <li>MFU: Model FLOPs Utilization</li>
 </ul>
 </li>
-<li>最终估计时间
-    $ \text{Time} = \frac{Total _ FLOPS}{Cluster _ Performance}$</li>
+<li>最终估计时间<ul>
+<li><span class="arithmatex">\(\text{Time} = \frac{Total \_ FLOPS}{Cluster \_ Performance}\)</span></li>
+</ul>
+</li>
 <li>假定 MFU =50% peak performance = 989T FLOPS</li>
+<li>答案：</li>
 <li>
-<p>答案：
-  $ \text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544   S \approx 144   D $</p>
+<p><span class="arithmatex">\(\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D\)</span></p>
 </li>
 <li>
 <p>QS2: What's the largest model that can you can train on 8 H100s using AdamW (naively)?</p>
