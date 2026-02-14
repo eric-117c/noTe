@@ -1079,25 +1079,25 @@
 <h3 id="neural-network">Neural Network 介绍<a class="headerlink" href="#neural-network" title="Permanent link">&para;</a></h3>
 <h4 id="logistic-regression-1">类比 Logistic Regression （1）<a class="headerlink" href="#logistic-regression-1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>设定目标: 在 image 里找一只 cat
-$<span class="arithmatex">\(\text{预期: }\hat{y} = \sigma(\omega x + b)
-\\
+<li>设定目标: 在 image 里找一只 cat</li>
+</ul>
+<div class="arithmatex">\[
+\text{预期: }\hat{y} = \sigma(\omega x + b)
+\newline
 \text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})]
-\\
+\newline
 \implies 
 \begin{cases}
 \omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}
-\\
+\newline
 b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
-\end{cases}\)</span>$</p>
-</li>
-<li>
-<p>流程 </p>
-<ol>
+\end{cases}
+\]</div>
+<ul>
+<li>流程 <ol>
 <li>初始化 <span class="arithmatex">\(\omega , b\)</span></li>
 <li>迭代找到**最优**的 <span class="arithmatex">\(\omega, b\)</span></li>
-<li>用公式<span class="arithmatex">\(\hat{y} = \sigma(\omega x + b)\)</span>预测</li>
+<li>用公式 <span class="arithmatex">\(\hat{y} = \sigma(\omega x + b)\)</span> 预测</li>
 </ol>
 </li>
 </ul>
