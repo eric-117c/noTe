@@ -1,3 +1,47 @@
-site_name: My Docs
+site_name: Er1c的noTebook
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - awesome-pages
 theme:
   name: material
+  icon:
+    logo: material/github
+  platte:
+    primary: indigo
+  features:
+    - navigation.tabs #顶部分类标签
+    - navigation.top #返回顶部按钮
+
+
+copyright: Copyright © 2026~2026 Er1c All Rights Reserved
