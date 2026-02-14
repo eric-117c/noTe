@@ -179,7 +179,7 @@
   
     
   
-  Welcome to MkDocs
+  Welcome to MyNote
 
       </a>
     </li>
@@ -335,7 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Welcome to MyNote
   
 
     
@@ -1131,34 +1131,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%B0%83%E7%A0%94/%E5%85%B3%E4%BA%8EQLoRA/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    关于QLoRA
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1468,25 +1440,55 @@
 <li><span class="arithmatex">\(R = (A_1, A_2, ...,A_n)\)</span> </li>
 <li>其中，<span class="arithmatex">\(R\)</span>指代的是一种关系模式， <span class="arithmatex">\(A_i\)</span>是一系列属性，关系模式是对关系的一种**抽象**</li>
 <li><span class="arithmatex">\(r(R)\)</span> 表示关系模式R中的一种关系， table 指代的也是关系</li>
-<li>举个例子,下面是一个关系模式R
+<li>举个例子,下面是一个关系模式R</li>
+</ul>
+<div class="arithmatex">\[
+\text{Relation Schema: } Student(\underline{ID}, Name, Dept\_Name, Salary)
+\]</div>
+<ul>
+<li>这是一个关系r,一般画成一张表table,横行代表一个r的一个元素,也就是一个元组tuple</li>
+<li>
+<p>例如，
 $$
-\text{Relation Schema: } Student(\underline{ID}, Name, Dept_Name, Salary)
-$$</li>
-<li>这是一个关系r,一般画成一张表table,横行代表一个r的一个元素,也就是一个元组tuple
-$$
-r = { {10101, Srinivasan, Comp. Sci.}, {12121, Wu, Finance}, {15151, Mozart, Music}, {22222, Einstein, Physics} }
-$$
-$$
-\begin{array}{|l|l|l|}
-\hline
-\mathbf{ID} &amp; \mathbf{Name} &amp; \mathbf{Dept_Name} \ \hline
-10101 &amp; \text{Srinivasan} &amp; \text{Comp. Sci.} \ \hline
-12121 &amp; \text{Wu} &amp; \text{Finance} \ \hline
-15151 &amp; \text{Mozart} &amp; \text{Music} \ \hline
-22222 &amp; \text{Einstein} &amp; \text{Physics} \ 
-\end{array}
-$$</li>
-<li>null value 空值: 一个特殊的值，表示一个值未知或不存在</li>
+r={{10101, Srinivasan, Comp. Sci.}, {12121, Wu, Finance}, {15151, Mozart, Music}, {22222, Einstein, Physics}}
+$$</p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Dept_Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">10101</td>
+<td style="text-align: left;">Srinivasan</td>
+<td style="text-align: left;">Comp. Sci.</td>
+</tr>
+<tr>
+<td style="text-align: left;">12121</td>
+<td style="text-align: left;">Wu</td>
+<td style="text-align: left;">Finance</td>
+</tr>
+<tr>
+<td style="text-align: left;">15151</td>
+<td style="text-align: left;">Mozart</td>
+<td style="text-align: left;">Music</td>
+</tr>
+<tr>
+<td style="text-align: left;">22222</td>
+<td style="text-align: left;">Einstein</td>
+<td style="text-align: left;">Physics</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>null value 空值: 一个特殊的值，表示一个值未知或不存在</p>
+</li>
 <li>在访问和更新数据库时会带来许多麻烦，应当尽量避免使用</li>
 </ul>
 <h4 id="13-keys">1.3 Keys 键<a class="headerlink" href="#13-keys" title="Permanent link">&para;</a></h4>

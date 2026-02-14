@@ -179,7 +179,7 @@
   
     
   
-  Welcome to MkDocs
+  Welcome to MyNote
 
       </a>
     </li>
@@ -335,7 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Welcome to MyNote
   
 
     
@@ -1096,34 +1096,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%B0%83%E7%A0%94/%E5%85%B3%E4%BA%8EQLoRA/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    关于QLoRA
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1397,9 +1369,11 @@
 </ul>
 </li>
 <li>假定 MFU =50% peak performance = 989T FLOPS</li>
-<li>答案：</li>
 <li>
-<p><span class="arithmatex">\(\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D\)</span></p>
+<p>答案：</p>
+<ul>
+<li><span class="arithmatex">\(\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D\)</span></li>
+</ul>
 </li>
 <li>
 <p>QS2: What's the largest model that can you can train on 8 H100s using AdamW (naively)?</p>
@@ -1408,8 +1382,8 @@
 <li>假定使用 FP32 来存储数据，即4个Bytes</li>
 <li>一个参数对应一个本体，一个梯度，两个中心矩</li>
 <li>Bytes_per_parameter = 16 Bytes</li>
-<li>答案：
-  $ \text{Num_Parameters} = \frac{80 \times 10 \times 10^9}{16} = 4 \times 10^{10} $</li>
+<li>答案：</li>
+<li><span class="arithmatex">\(\text{Num_Parameters} = \frac{80 \times 10 \times 10^9}{16} = 4 \times 10^{10}\)</span></li>
 </ul>
 <h3 id="memory-accounting">Memory Accounting<a class="headerlink" href="#memory-accounting" title="Permanent link">&para;</a></h3>
 <h4 id="tensor-basic">Tensor Basic<a class="headerlink" href="#tensor-basic" title="Permanent link">&para;</a></h4>

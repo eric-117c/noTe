@@ -179,7 +179,7 @@
   
     
   
-  Welcome to MkDocs
+  Welcome to MyNote
 
       </a>
     </li>
@@ -335,7 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Welcome to MyNote
   
 
     
@@ -948,34 +948,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%E8%B0%83%E7%A0%94/%E5%85%B3%E4%BA%8EQLoRA/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    关于QLoRA
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1082,16 +1054,14 @@
 <li>设定目标: 在 image 里找一只 cat</li>
 </ul>
 <div class="arithmatex">\[
-\text{预期: }\hat{y} = \sigma(\omega x + b)
+\text{预期: }\hat{y} = \sigma(\omega x + b)\newline
 $$
 $$
-\text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})]
+\text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})] \\
 $$
 $$
-\implies 
-\begin{cases}
-\omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}
-\newline
+\implies \begin{cases}
+\omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}\newline
 b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
 \end{cases}
 \]</div>
