@@ -1897,47 +1897,45 @@ WHERE  dept_total.value &gt; dept_total_avg.value;</code></li>
                             FROM   department
                             WHERE  building = 'Waston');</code></li>
 <li>插入</li>
-<li>基本形式
-  ```sql
-  -- 第一种
-  INSERT INTO r(A_1, A_2, ...,A_n)
-         VALUES(D_1, D_2, ...,D_n);
-  /*</li>
-<li>r 后面的属性列表可以省略</li>
-<li>但是后面的数据就要和默认属性顺序一致
-  <em>/
-
-  --第二种
-  INSERT INTO r_1
-         SELECT (A_1, A_2, ...,A_n)
-         FROM   r_2
-         WHERE  P;
-  /</em></li>
-<li>适用于在查询结果的基础上向关系插入元组
-  */       <br />
-  ```</li>
-<li>更新</li>
-<li>基本形式
-  ```sql
-  -- 第一种
-  UPDATE  r
-  SET     A = VALUE
-  WHERE   Predicate;
-
-  --第二种
-  UPDATE r
-  SET A = case
-              WHEN pred_1 THEN result_1
-              WHEN pred_2 THEN result_2
-              ...
-              WHEN pred_n THEN result_n
-              ELSE reult_0
-          END;
-  /*</li>
-<li>适用多重分支
-  */       <br />
-  ```</li>
+<li>基本形式</li>
 </ul>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">-- 第一种</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">r</span><span class="p">(</span><span class="n">A_1</span><span class="p">,</span><span class="w"> </span><span class="n">A_2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="n">A_n</span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="k">VALUES</span><span class="p">(</span><span class="n">D_1</span><span class="p">,</span><span class="w"> </span><span class="n">D_2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="n">D_n</span><span class="p">);</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="cm">/*</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="cm">  * r 后面的属性列表可以省略</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="cm">  * 但是后面的数据就要和默认属性顺序一致</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="cm">*/</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1">--第二种</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">r_1</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">A_1</span><span class="p">,</span><span class="w"> </span><span class="n">A_2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="n">A_n</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">        </span><span class="k">FROM</span><span class="w">   </span><span class="n">r_2</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">        </span><span class="k">WHERE</span><span class="w">  </span><span class="n">P</span><span class="p">;</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="cm">/*</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="cm">  * 适用于在查询结果的基础上向关系插入元组</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="cm">*/</span><span class="w">         </span>
+</span></code></pre></div>
+- 更新
+  - 基本形式</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">-- 第一种</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">UPDATE</span><span class="w">  </span><span class="n">r</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">SET</span><span class="w">     </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VALUE</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">WHERE</span><span class="w">   </span><span class="n">Predicate</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1">--第二种</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">r</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">SET</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">case</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">pred_1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">result_1</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">pred_2</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">result_2</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">            </span><span class="p">...</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">pred_n</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="n">result_n</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="n">reult_0</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="k">END</span><span class="p">;</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="cm">/*</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="cm"> * 适用多重分支</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="cm">*/</span><span class="w">         </span>
+</span></code></pre></div>
 <h4 id="25-sql">2.5 SQL 视图&amp;索引<a class="headerlink" href="#25-sql" title="Permanent link">&para;</a></h4>
 <ul>
 <li>view 视图</li>
