@@ -1081,7 +1081,20 @@
 <ul>
 <li>设定目标: 在 image 里找一只 cat</li>
 </ul>
-<div class="arithmatex">\[\text{预期: }\hat{y} = \sigma(\omega x + b)\newline \text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})]\newline \implies \begin{cases}\omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}\newline b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}\end{cases}\]</div>
+<div class="arithmatex">\[
+\text{预期: }\hat{y} = \sigma(\omega x + b)
+$$
+$$
+\text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})]
+$$
+$$
+\implies 
+\begin{cases}
+\omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}
+\newline
+b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
+\end{cases}
+\]</div>
 <ul>
 <li>流程 <ol>
 <li>初始化 <span class="arithmatex">\(\omega , b\)</span></li>
