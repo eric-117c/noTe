@@ -2420,7 +2420,7 @@
 </ul>
 <h5 id="12">1.2  基本概念和结构<a class="headerlink" href="#12" title="Permanent link">&para;</a></h5>
 <ul>
-<li>a relation r is a subset of <span class="arithmatex">\(D_{1}\times D_{2}\times …\times D_{n}\)</span>，一条relation就是其中的一个n元的**元组(tuple)** </li>
+<li>a relation r is a subset of <span class="arithmatex"><span class="MathJax_Preview">D_{1}\times D_{2}\times …\times D_{n}</span><script type="math/tex">D_{1}\times D_{2}\times …\times D_{n}</script></span>，一条relation就是其中的一个n元的**元组(tuple)** </li>
 <li>attribute属性，指表中的**列名**  </li>
 <li>attribution type 属性的类型</li>
 <li>attribute value 属性值，某个属性在某条relation中的值<ul>
@@ -2429,7 +2429,7 @@
 </ul>
 </li>
 <li>Relation Schema 关系模式</li>
-<li><span class="arithmatex">\(R=(A_{1},A_{2},…,A_{n})\)</span> 其中<span class="arithmatex">\(A_i\)</span>是一系列属性，关系模式是对关系的一种**抽象** </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R=(A_{1},A_{2},…,A_{n})</span><script type="math/tex">R=(A_{1},A_{2},…,A_{n})</script></span> 其中<span class="arithmatex"><span class="MathJax_Preview">A_i</span><script type="math/tex">A_i</script></span>是一系列属性，关系模式是对关系的一种**抽象** </li>
 <li>r(R)表示关系模式R中的一种关系，table表示这个关系当前的值(关系实例)<ul>
 <li>每个关系r中的元素是table中的一行</li>
 <li>不过经常用相同的名字命名关系模式和关系</li>
@@ -2455,26 +2455,26 @@
 </ul>
 <h5 id="14-relational-algebra">1.4 Relational algebra关系代数<a class="headerlink" href="#14-relational-algebra" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Select 选择：<span class="arithmatex">\(\sigma_{p}(r)=\{t|t\in r \and p(t) \}\)</span> </li>
+<li>Select 选择：<span class="arithmatex"><span class="MathJax_Preview">\sigma_{p}(r)=\{t|t\in r \and p(t) \}</span><script type="math/tex">\sigma_{p}(r)=\{t|t\in r \and p(t) \}</script></span> </li>
 <li>筛选出所有满足条件p(t)的元素t</li>
-<li>Project投影：<span class="arithmatex">\(\prod_{A_1,A_2,\cdots,A_k}(r)\)</span></li>
-<li>运算的结果是原来的关系r中各列只保留属性<span class="arithmatex">\(A_1,A_2,\dots,A_k\)</span> 后的关系</li>
+<li>Project投影：<span class="arithmatex"><span class="MathJax_Preview">\prod_{A_1,A_2,\cdots,A_k}(r)</span><script type="math/tex">\prod_{A_1,A_2,\cdots,A_k}(r)</script></span></li>
+<li>运算的结果是原来的关系r中各列只保留属性<span class="arithmatex"><span class="MathJax_Preview">A_1,A_2,\dots,A_k</span><script type="math/tex">A_1,A_2,\dots,A_k</script></span> 后的关系</li>
 <li>会**自动去掉重复**的元素，因为可能投影的时候舍弃的属性是可以标识关系唯一性的属性</li>
-<li>Union 并操作：<span class="arithmatex">\(r \cup s=\{t|t\in r \or t \in s\}\)</span>  </li>
+<li>Union 并操作：<span class="arithmatex"><span class="MathJax_Preview">r \cup s=\{t|t\in r \or t \in s\}</span><script type="math/tex">r \cup s=\{t|t\in r \or t \in s\}</script></span>  </li>
 <li>两个关系的属性个数必须相同</li>
 <li>各属性的domain必须是可以比较大小的</li>
-<li>Set difference 差操作：<span class="arithmatex">\(r-s=\{t| t\in r \and t \notin s\}\)</span> </li>
-<li>Cartesian-Product笛卡尔积：<span class="arithmatex">\(r\times s=\{tq| t\in r\and q\in s\}\)</span> </li>
+<li>Set difference 差操作：<span class="arithmatex"><span class="MathJax_Preview">r-s=\{t| t\in r \and t \notin s\}</span><script type="math/tex">r-s=\{t| t\in r \and t \notin s\}</script></span> </li>
+<li>Cartesian-Product笛卡尔积：<span class="arithmatex"><span class="MathJax_Preview">r\times s=\{tq| t\in r\and q\in s\}</span><script type="math/tex">r\times s=\{tq| t\in r\and q\in s\}</script></span> </li>
 <li>两个关系必须是不相交的，如果相交则需要对结果中重复的属性名进行重命名</li>
 <li>笛卡儿积运算的结果关系中元组的个数应该是rs的个数之乘积</li>
-<li>Renaming重命名：<span class="arithmatex">\(\rho_{X}(E)\)</span> </li>
-<li>将E重命名为x, 让一个关系拥有多个别名，同时X可以写为<span class="arithmatex">\(X(A_1,A_2,\dots,A_n)\)</span> 表示对属性也进行重命名</li>
+<li>Renaming重命名：<span class="arithmatex"><span class="MathJax_Preview">\rho_{X}(E)</span><script type="math/tex">\rho_{X}(E)</script></span> </li>
+<li>将E重命名为x, 让一个关系拥有多个别名，同时X可以写为<span class="arithmatex"><span class="MathJax_Preview">X(A_1,A_2,\dots,A_n)</span><script type="math/tex">X(A_1,A_2,\dots,A_n)</script></span> 表示对属性也进行重命名</li>
 <li>类似于C++中的引用</li>
 <li>扩展运算: 可以用前面的六种基本运算得到</li>
-<li>Intersection 交运算<span class="arithmatex">\(r \cap s=\{t|t\in r \and t \in s\}=r-(r-s)\)</span>   </li>
-<li>Natual-Join 自然连接：<span class="arithmatex">\(r\Join s\)</span> <ul>
+<li>Intersection 交运算<span class="arithmatex"><span class="MathJax_Preview">r \cap s=\{t|t\in r \and t \in s\}=r-(r-s)</span><script type="math/tex">r \cap s=\{t|t\in r \and t \in s\}=r-(r-s)</script></span>   </li>
+<li>Natual-Join 自然连接：<span class="arithmatex"><span class="MathJax_Preview">r\Join s</span><script type="math/tex">r\Join s</script></span> <ul>
 <li>两个关系中同名属性在自然连接的时候当作**同一个属性**来处理</li>
-<li><strong>Theta join</strong> 满足某种条件的合并：<span class="arithmatex">\(r\Join_{\theta} s=\sigma_{\theta}(r\Join s)\)</span>  </li>
+<li><strong>Theta join</strong> 满足某种条件的合并：<span class="arithmatex"><span class="MathJax_Preview">r\Join_{\theta} s=\sigma_{\theta}(r\Join s)</span><script type="math/tex">r\Join_{\theta} s=\sigma_{\theta}(r\Join s)</script></span>  </li>
 </ul>
 </li>
 <li>Outer-Join外部连接，分为左外连接，右外连接，全外连接<ul>
@@ -2486,13 +2486,13 @@
 <li>Full join左右全上，不存在对应的就写成空值</li>
 </ul>
 </li>
-<li>Division除法：<span class="arithmatex">\(r\div s=\{t|t\in\prod_{R-S}(r)\and \forall u \in s (tu\in r)\}\)</span><ul>
-<li>如果<span class="arithmatex">\(R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\and S=(B_1,\dots,B_n)\)</span> 则有<span class="arithmatex">\(R- S=(A_1,A_2,\dots,A_m)\)</span> </li>
+<li>Division除法：<span class="arithmatex"><span class="MathJax_Preview">r\div s=\{t|t\in\prod_{R-S}(r)\and \forall u \in s (tu\in r)\}</span><script type="math/tex">r\div s=\{t|t\in\prod_{R-S}(r)\and \forall u \in s (tu\in r)\}</script></span><ul>
+<li>如果<span class="arithmatex"><span class="MathJax_Preview">R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\and S=(B_1,\dots,B_n)</span><script type="math/tex">R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\and S=(B_1,\dots,B_n)</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">R- S=(A_1,A_2,\dots,A_m)</span><script type="math/tex">R- S=(A_1,A_2,\dots,A_m)</script></span> </li>
 </ul>
 </li>
-<li>Assignment声明操作，类似于变量命名用<span class="arithmatex">\(\leftarrow\)</span>  可以把一个关系代数操作进行命名 </li>
+<li>Assignment声明操作，类似于变量命名用<span class="arithmatex"><span class="MathJax_Preview">\leftarrow</span><script type="math/tex">\leftarrow</script></span>  可以把一个关系代数操作进行命名 </li>
 <li>Aggregation operations聚合操作</li>
-<li>基本形式：<span class="arithmatex">\(_{G_1,G_2,\dots,G_n}{\cal {G}}_{F_1(A_1),\dots,F_n(A_n)}(E)\)</span> </li>
+<li>基本形式：<span class="arithmatex"><span class="MathJax_Preview">_{G_1,G_2,\dots,G_n}{\cal {G}}_{F_1(A_1),\dots,F_n(A_n)}(E)</span><script type="math/tex">_{G_1,G_2,\dots,G_n}{\cal {G}}_{F_1(A_1),\dots,F_n(A_n)}(E)</script></span> </li>
 <li>G是聚合的标准，对于关系中所有G值相同的元素进行聚合，F( )是聚合的运算函数</li>
 <li>常见的有SUM/MAX/MIN/AVG/COUNT</li>
 </ul>
@@ -2556,7 +2556,7 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">where</span><span class="w"> </span><span class="n">P</span>
 </span></code></pre></div>
 <ul>
-<li>上述查询等价于<span class="arithmatex">\(\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))\)</span> </li>
+<li>上述查询等价于<span class="arithmatex"><span class="MathJax_Preview">\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))</span><script type="math/tex">\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))</script></span> </li>
 <li>
 <p>SQL查询的结果是一个关系</p>
 </li>
@@ -2631,7 +2631,7 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span><span class="p">;</span>
 </span></code></pre></div>
 <ul>
-<li>事实上SQL语句的聚合操作和关系代数中的聚合运算是完全对应的，关系代数中的聚合运算表达式<span class="arithmatex">\(_{G_1,G_2,\dots,G_n}{\cal G}_{F_1(A_1),\dots,F_n(A_n)}(E)\)</span>对应的SQL语句是</li>
+<li>事实上SQL语句的聚合操作和关系代数中的聚合运算是完全对应的，关系代数中的聚合运算表达式<span class="arithmatex"><span class="MathJax_Preview">_{G_1,G_2,\dots,G_n}{\cal G}_{F_1(A_1),\dots,F_n(A_n)}(E)</span><script type="math/tex">_{G_1,G_2,\dots,G_n}{\cal G}_{F_1(A_1),\dots,F_n(A_n)}(E)</script></span>对应的SQL语句是</li>
 </ul>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">select</span><span class="w"> </span><span class="n">G1</span><span class="p">,</span><span class="n">G2</span><span class="p">,</span><span class="err">…</span><span class="p">,</span><span class="n">Gn</span><span class="p">,</span><span class="n">F1</span><span class="p">(</span><span class="n">A1</span><span class="p">),</span><span class="err">…</span><span class="p">,</span><span class="n">Fn</span><span class="p">(</span><span class="n">An</span><span class="p">)</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">from</span><span class="w"> </span><span class="n">E</span>
@@ -2954,22 +2954,22 @@ create assertion credits_constaint check
 <p>Lossy Decomposition 有损的分解：不能用分解后的几个关系重建原本的关系</p>
 </li>
 <li>Lossless join 无损分解的定义：<ul>
-<li>R 被分解为(R1, R2)并且<span class="arithmatex">\(R=R_1\cup R_2\)</span>  </li>
-<li>对于任何关系模式R上的关系r有 <span class="arithmatex">\(r=\prod_{R_1}(r)\Join \prod_{R_2}(r)\)</span></li>
+<li>R 被分解为(R1, R2)并且<span class="arithmatex"><span class="MathJax_Preview">R=R_1\cup R_2</span><script type="math/tex">R=R_1\cup R_2</script></span>  </li>
+<li>对于任何关系模式R上的关系r有 <span class="arithmatex"><span class="MathJax_Preview">r=\prod_{R_1}(r)\Join \prod_{R_2}(r)</span><script type="math/tex">r=\prod_{R_1}(r)\Join \prod_{R_2}(r)</script></span></li>
 </ul>
 </li>
 </ul>
 <h6 id="333-functional-dependency">3.3.3 Functional dependency 函数依赖<a class="headerlink" href="#333-functional-dependency" title="Permanent link">&para;</a></h6>
 <ul>
 <li>**函数依赖**的定义</li>
-<li>对于一个关系模式R，如果<span class="arithmatex">\(\alpha \subset R\)</span> 并且<span class="arithmatex">\(\beta\subset R\)</span> 则函数依赖<span class="arithmatex">\(\alpha \rightarrow\beta\)</span> 定义在R上，当且仅当<ul>
-<li>如果对于R的任意关系r(R)  当其中的任意两个元组t1和t2，如果他们的<span class="arithmatex">\(\alpha\)</span>属性值相同可以推出他们的<span class="arithmatex">\(\beta\)</span>属性值也相同</li>
+<li>对于一个关系模式R，如果<span class="arithmatex"><span class="MathJax_Preview">\alpha \subset R</span><script type="math/tex">\alpha \subset R</script></span> 并且<span class="arithmatex"><span class="MathJax_Preview">\beta\subset R</span><script type="math/tex">\beta\subset R</script></span> 则函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow\beta</span><script type="math/tex">\alpha \rightarrow\beta</script></span> 定义在R上，当且仅当<ul>
+<li>如果对于R的任意关系r(R)  当其中的任意两个元组t1和t2，如果他们的<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>属性值相同可以推出他们的<span class="arithmatex"><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span>属性值也相同</li>
 </ul>
 </li>
-<li>如果某个属性集A可以决定另一个属性集B的值，就称<span class="arithmatex">\(A\rightarrow B\)</span>是一个函数依赖</li>
+<li>如果某个属性集A可以决定另一个属性集B的值，就称<span class="arithmatex"><span class="MathJax_Preview">A\rightarrow B</span><script type="math/tex">A\rightarrow B</script></span>是一个函数依赖</li>
 <li>函数依赖和键的关系：函数依赖实际上是键的概念的一种泛化<ul>
-<li>K是关系模式R的**超键**当且仅当 <span class="arithmatex">\(K\rightarrow R\)</span> </li>
-<li>K 是R上的**候选主键**当且仅当 <span class="arithmatex">\(K\rightarrow R\)</span> 并且不存在 <span class="arithmatex">\(\alpha\sub K, \alpha\rightarrow R\)</span> </li>
+<li>K是关系模式R的**超键**当且仅当 <span class="arithmatex"><span class="MathJax_Preview">K\rightarrow R</span><script type="math/tex">K\rightarrow R</script></span> </li>
+<li>K 是R上的**候选主键**当且仅当 <span class="arithmatex"><span class="MathJax_Preview">K\rightarrow R</span><script type="math/tex">K\rightarrow R</script></span> 并且不存在 <span class="arithmatex"><span class="MathJax_Preview">\alpha\sub K, \alpha\rightarrow R</span><script type="math/tex">\alpha\sub K, \alpha\rightarrow R</script></span> </li>
 </ul>
 </li>
 <li>一个平凡的的结论：子集一定对自己函数依赖</li>
@@ -2983,17 +2983,17 @@ create assertion credits_constaint check
 <p>闭包, 对于原始的函数依赖集合F可以推出的所有函数依赖关系产生的集合就是**F的闭包** </p>
 </li>
 <li>
-<p>符号用<span class="arithmatex">\(F^+\)</span>表示</p>
+<p>符号用<span class="arithmatex"><span class="MathJax_Preview">F^+</span><script type="math/tex">F^+</script></span>表示</p>
 </li>
 <li>
 <p>函数依赖的性质</p>
 <ul>
-<li>reflexity：<span class="arithmatex">\(\alpha\)</span>的子集一定关于<span class="arithmatex">\(\alpha\)</span>函数依赖</li>
-<li>augmentation：如果<span class="arithmatex">\(\alpha\rightarrow \beta\)</span> 则有<span class="arithmatex">\(\lambda\alpha\rightarrow \lambda\beta\)</span> </li>
-<li>transitivity：如果<span class="arithmatex">\(a\rightarrow \beta \and \beta\rightarrow\gamma\)</span> 则有<span class="arithmatex">\(a\rightarrow \gamma\)</span> </li>
-<li>union：如果<span class="arithmatex">\(\alpha\rightarrow \beta\and \alpha\rightarrow \gamma\)</span> 则有<span class="arithmatex">\(\alpha \rightarrow \beta\gamma\)</span> </li>
-<li>decomposition：如果<span class="arithmatex">\(\alpha \rightarrow \beta\gamma\)</span> 则有<span class="arithmatex">\(\alpha\rightarrow \beta\and \alpha\rightarrow \gamma\)</span> </li>
-<li>pseudotransitivity：如果<span class="arithmatex">\(\alpha\rightarrow \beta\and \beta\gamma\rightarrow \delta\)</span> 则有<span class="arithmatex">\(\gamma\alpha\rightarrow\delta\)</span>  </li>
+<li>reflexity：<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>的子集一定关于<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>函数依赖</li>
+<li>augmentation：如果<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta</span><script type="math/tex">\alpha\rightarrow \beta</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">\lambda\alpha\rightarrow \lambda\beta</span><script type="math/tex">\lambda\alpha\rightarrow \lambda\beta</script></span> </li>
+<li>transitivity：如果<span class="arithmatex"><span class="MathJax_Preview">a\rightarrow \beta \and \beta\rightarrow\gamma</span><script type="math/tex">a\rightarrow \beta \and \beta\rightarrow\gamma</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">a\rightarrow \gamma</span><script type="math/tex">a\rightarrow \gamma</script></span> </li>
+<li>union：如果<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta\and \alpha\rightarrow \gamma</span><script type="math/tex">\alpha\rightarrow \beta\and \alpha\rightarrow \gamma</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow \beta\gamma</span><script type="math/tex">\alpha \rightarrow \beta\gamma</script></span> </li>
+<li>decomposition：如果<span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow \beta\gamma</span><script type="math/tex">\alpha \rightarrow \beta\gamma</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta\and \alpha\rightarrow \gamma</span><script type="math/tex">\alpha\rightarrow \beta\and \alpha\rightarrow \gamma</script></span> </li>
+<li>pseudotransitivity：如果<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta\and \beta\gamma\rightarrow \delta</span><script type="math/tex">\alpha\rightarrow \beta\and \beta\gamma\rightarrow \delta</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">\gamma\alpha\rightarrow\delta</span><script type="math/tex">\gamma\alpha\rightarrow\delta</script></span>  </li>
 </ul>
 </li>
 <li>
@@ -3006,8 +3006,8 @@ create assertion credits_constaint check
 <li>
 <p>属性集的闭包</p>
 <ul>
-<li>闭包中所有关于<span class="arithmatex">\(\alpha\)</span>函数依赖的属性集构成的集合</li>
-<li>即如果<span class="arithmatex">\((\alpha\rightarrow \beta)\in F^+\)</span>则有<span class="arithmatex">\(\beta\in\alpha^{+}\)</span> </li>
+<li>闭包中所有关于<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>函数依赖的属性集构成的集合</li>
+<li>即如果<span class="arithmatex"><span class="MathJax_Preview">(\alpha\rightarrow \beta)\in F^+</span><script type="math/tex">(\alpha\rightarrow \beta)\in F^+</script></span>则有<span class="arithmatex"><span class="MathJax_Preview">\beta\in\alpha^{+}</span><script type="math/tex">\beta\in\alpha^{+}</script></span> </li>
 <li>计算**属性集闭包**的算法</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>result={a}
@@ -3019,15 +3019,15 @@ create assertion credits_constaint check
 </span></code></pre></div>
 <ul>
 <li>属性集闭包的作用</li>
-<li>测试是否为主键：如果<span class="arithmatex">\(\alpha\)</span>的闭包包含了所有属性，则α就是主键</li>
-<li>测试函数独立：为了验证<span class="arithmatex">\(\alpha\rightarrow \beta\)</span>是否存在只需要验证β是否在α的闭包中</li>
-<li>计算<span class="arithmatex">\(F^+\)</span>：通过每个属性的闭包可以得到整个关系模式的闭包</li>
+<li>测试是否为主键：如果<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>的闭包包含了所有属性，则α就是主键</li>
+<li>测试函数独立：为了验证<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta</span><script type="math/tex">\alpha\rightarrow \beta</script></span>是否存在只需要验证β是否在α的闭包中</li>
+<li>计算<span class="arithmatex"><span class="MathJax_Preview">F^+</span><script type="math/tex">F^+</script></span>：通过每个属性的闭包可以得到整个关系模式的闭包</li>
 </ul>
 </li>
 <li>
 <p>判定是否为Lossless Join的办法</p>
 <ul>
-<li>当且仅当<span class="arithmatex">\(R_1\cap R_2\rightarrow R_1\)</span> 或者<span class="arithmatex">\(R_1\cap R_2\rightarrow R_2\)</span>至少有一个<span class="arithmatex">\(F^+\)</span>中</li>
+<li>当且仅当<span class="arithmatex"><span class="MathJax_Preview">R_1\cap R_2\rightarrow R_1</span><script type="math/tex">R_1\cap R_2\rightarrow R_1</script></span> 或者<span class="arithmatex"><span class="MathJax_Preview">R_1\cap R_2\rightarrow R_2</span><script type="math/tex">R_1\cap R_2\rightarrow R_2</script></span>至少有一个<span class="arithmatex"><span class="MathJax_Preview">F^+</span><script type="math/tex">F^+</script></span>中</li>
 </ul>
 </li>
 </ul>
@@ -3037,14 +3037,14 @@ create assertion credits_constaint check
 <p>BC 范式(Boyee-Codd Normal Form) </p>
 </li>
 <li>
-<p>BC范式的条件是：闭包<span class="arithmatex">\(F^+\)</span>中的所有函数依赖<span class="arithmatex">\(\alpha \rightarrow \beta\)</span> 至少满足下面的一条</p>
+<p>BC范式的条件是：闭包<span class="arithmatex"><span class="MathJax_Preview">F^+</span><script type="math/tex">F^+</script></span>中的所有函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow \beta</span><script type="math/tex">\alpha \rightarrow \beta</script></span> 至少满足下面的一条</p>
 <ul>
-<li><span class="arithmatex">\(\alpha \rightarrow \beta\)</span> 是平凡的(也就是β是α的子集)</li>
-<li>α是关系模式R的一个**超键**，即<span class="arithmatex">\(\alpha \rightarrow R\)</span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow \beta</span><script type="math/tex">\alpha \rightarrow \beta</script></span> 是平凡的(也就是β是α的子集)</li>
+<li>α是关系模式R的一个**超键**，即<span class="arithmatex"><span class="MathJax_Preview">\alpha \rightarrow R</span><script type="math/tex">\alpha \rightarrow R</script></span> </li>
 </ul>
 </li>
 <li>如何验证BCNF：<ul>
-<li>检测一个非平凡的函数依赖<span class="arithmatex">\(\alpha\rightarrow\beta\)</span>是否违背了BCNF的原则</li>
+<li>检测一个非平凡的函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta</span><script type="math/tex">\alpha\rightarrow\beta</script></span>是否违背了BCNF的原则</li>
 <li>计算α的属性闭包</li>
 <li>如果这个属性闭包包含了所有的元素，那么α就是一个**超键** </li>
 <li>如果α不是超键而这个函数依赖又不平凡，就打破了BCNF的原则</li>
@@ -3084,11 +3084,11 @@ create assertion credits_constaint check
 <li>
 <p>Denpendency preservation 独立性保护,把R和F的闭包按照关系的对应进行划分</p>
 <ul>
-<li>用<span class="arithmatex">\(F_i\)</span>表示只包含在<span class="arithmatex">\(R_i\)</span>中出现的元素的函数依赖构成的集合</li>
-<li>我们希望的结果是 <span class="arithmatex">\((F_1\cup F_2\cup\dots\cup F_n)^+=F^+\)</span> </li>
+<li>用<span class="arithmatex"><span class="MathJax_Preview">F_i</span><script type="math/tex">F_i</script></span>表示只包含在<span class="arithmatex"><span class="MathJax_Preview">R_i</span><script type="math/tex">R_i</script></span>中出现的元素的函数依赖构成的集合</li>
+<li>我们希望的结果是 <span class="arithmatex"><span class="MathJax_Preview">(F_1\cup F_2\cup\dots\cup F_n)^+=F^+</span><script type="math/tex">(F_1\cup F_2\cup\dots\cup F_n)^+=F^+</script></span> </li>
 <li>BCNF的分解一定是有独立性保护的</li>
 <li>独立性保护的验证算法</li>
-<li>如果最终的结果result包含了所有属性，那么函数依赖<span class="arithmatex">\(\alpha\rightarrow \beta\)</span> 就是被保护的</li>
+<li>如果最终的结果result包含了所有属性，那么函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta</span><script type="math/tex">\alpha\rightarrow \beta</script></span> 就是被保护的</li>
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>result = α
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>while result changed do
@@ -3101,11 +3101,11 @@ create assertion credits_constaint check
 <p>Third normal form 第三范式</p>
 </li>
 <li>
-<p>第三范式的定义：对于函数依赖的闭包<span class="arithmatex">\(F^+\)</span>中的所有函数依赖<span class="arithmatex">\(\alpha\rightarrow\beta\)</span> 下面三条至少满足一条</p>
+<p>第三范式的定义：对于函数依赖的闭包<span class="arithmatex"><span class="MathJax_Preview">F^+</span><script type="math/tex">F^+</script></span>中的所有函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta</span><script type="math/tex">\alpha\rightarrow\beta</script></span> 下面三条至少满足一条</p>
 <ul>
-<li><span class="arithmatex">\(\alpha\rightarrow\beta\)</span> 是平凡的</li>
-<li><span class="arithmatex">\(\alpha\)</span>是关系模式R的超键</li>
-<li>每一个<span class="arithmatex">\(\beta-\alpha\)</span> 中的 属性A都包含在一个R的候选主键中 </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta</span><script type="math/tex">\alpha\rightarrow\beta</script></span> 是平凡的</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>是关系模式R的超键</li>
+<li>每一个<span class="arithmatex"><span class="MathJax_Preview">\beta-\alpha</span><script type="math/tex">\beta-\alpha</script></span> 中的 属性A都包含在一个R的候选主键中 </li>
 </ul>
 </li>
 <li>BCNF一定是3NF，实际上3NF是为了保证独立性保护的BCNF</li>
@@ -3118,7 +3118,7 @@ create assertion credits_constaint check
 <li>
 <p>不需要判断闭包中的所有函数依赖，只需要对已有的F中的所有函数依赖进行判断</p>
 </li>
-<li>用闭包可以检查<span class="arithmatex">\(\alpha\rightarrow \beta\)</span>中的α是不是超键</li>
+<li>用闭包可以检查<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow \beta</span><script type="math/tex">\alpha\rightarrow \beta</script></span>中的α是不是超键</li>
 <li>如果不是，就需要检查β中的每一个属性包含在R的候选键中</li>
 </ul>
 <h6 id="336">3.3.6 最小覆盖<a class="headerlink" href="#336" title="Permanent link">&para;</a></h6>
@@ -3130,31 +3130,31 @@ create assertion credits_constaint check
 <p>函数依赖关系的最小集合(也就是没有冗余，和F等价可以推导出F+的关系集合)</p>
 </li>
 <li>无关属性Extraneous Attributes：<ul>
-<li>定义：对于函数依赖集合F中的一个函数依赖<span class="arithmatex">\(\alpha\rightarrow\beta\)</span></li>
-<li>α中的属性A是多余的，如果F逻辑上可以推出<span class="arithmatex">\((F-\{\alpha\rightarrow\beta\})\or \{(\alpha-A)\rightarrow\beta\}\)</span> </li>
-<li>β中的属性A是多余的，如果<span class="arithmatex">\((F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}\)</span> 逻辑上可以推出F<ul>
+<li>定义：对于函数依赖集合F中的一个函数依赖<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta</span><script type="math/tex">\alpha\rightarrow\beta</script></span></li>
+<li>α中的属性A是多余的，如果F逻辑上可以推出<span class="arithmatex"><span class="MathJax_Preview">(F-\{\alpha\rightarrow\beta\})\or \{(\alpha-A)\rightarrow\beta\}</span><script type="math/tex">(F-\{\alpha\rightarrow\beta\})\or \{(\alpha-A)\rightarrow\beta\}</script></span> </li>
+<li>β中的属性A是多余的，如果<span class="arithmatex"><span class="MathJax_Preview">(F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}</span><script type="math/tex">(F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}</script></span> 逻辑上可以推出F<ul>
 <li>更强的函数逻辑上可以推导出更弱的函数</li>
 </ul>
 </li>
-<li>判断<span class="arithmatex">\(\alpha\rightarrow\beta\)</span>中的一个属性是不是多余的</li>
+<li>判断<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta</span><script type="math/tex">\alpha\rightarrow\beta</script></span>中的一个属性是不是多余的</li>
 <li>测试α中的属性A是否为多余的<ul>
-<li>计算<span class="arithmatex">\((\alpha-A)^+\)</span></li>
+<li>计算<span class="arithmatex"><span class="MathJax_Preview">(\alpha-A)^+</span><script type="math/tex">(\alpha-A)^+</script></span></li>
 <li>检查结果中是否包含β，如果有就说明A是多余的</li>
 </ul>
 </li>
 <li>测试β中的属性A是否为多余的<ul>
-<li>只用<span class="arithmatex">\((F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}\)</span>中优的依赖关系计算<span class="arithmatex">\(\alpha^+\)</span> </li>
+<li>只用<span class="arithmatex"><span class="MathJax_Preview">(F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}</span><script type="math/tex">(F-\{\alpha\rightarrow\beta\})\or \{\alpha\rightarrow(\beta-A)\}</script></span>中优的依赖关系计算<span class="arithmatex"><span class="MathJax_Preview">\alpha^+</span><script type="math/tex">\alpha^+</script></span> </li>
 <li>如果结果包含A，就说明A是多余的</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>最小覆盖<span class="arithmatex">\(F_c\)</span>的定义<ul>
+<li>最小覆盖<span class="arithmatex"><span class="MathJax_Preview">F_c</span><script type="math/tex">F_c</script></span>的定义<ul>
 <li>和F可以互相从逻辑上推导出，并且最小覆盖中没有多余的信息</li>
 <li>最小覆盖中的每个函数依赖中左边的内容都是unique的</li>
 <li>如何计算最小覆盖：PPT-8的53页有一个例子</li>
 <li>先令Fc=F</li>
-<li>用Union rule将Fc中所有满足<span class="arithmatex">\(\alpha\rightarrow\beta_1 \and \alpha\rightarrow\beta_2\)</span>的函数依赖替换为<span class="arithmatex">\(\alpha\rightarrow\beta_1\beta_2\)</span> </li>
+<li>用Union rule将Fc中所有满足<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta_1 \and \alpha\rightarrow\beta_2</span><script type="math/tex">\alpha\rightarrow\beta_1 \and \alpha\rightarrow\beta_2</script></span>的函数依赖替换为<span class="arithmatex"><span class="MathJax_Preview">\alpha\rightarrow\beta_1\beta_2</span><script type="math/tex">\alpha\rightarrow\beta_1\beta_2</script></span> </li>
 <li>找到Fc中的一个函数依赖去掉里面重复的属性</li>
 <li>重复2，3两个步骤直到Fc不再变化</li>
 </ul>
@@ -3314,7 +3314,7 @@ create assertion credits_constaint check
 <li>
 <p>B+树上的查询的时间复杂度是logN级别，N是search key的总个数</p>
 <ul>
-<li>查询的路径长度：不会超过<span class="arithmatex">\(\log_{n/2}(K)\)</span> + 1其中K是B+树中的索引的个数(即规模N)</li>
+<li>查询的路径长度：不会超过<span class="arithmatex"><span class="MathJax_Preview">\log_{n/2}(K)</span><script type="math/tex">\log_{n/2}(K)</script></span> + 1其中K是B+树中的索引的个数(即规模N)</li>
 <li>B+树的一个节点的大小和一个磁盘区块一样大(往往是4KB)而在n的规模一般在100左右</li>
 </ul>
 </li>
@@ -3331,8 +3331,8 @@ create assertion credits_constaint check
 <li>
 <p>高度的估计：</p>
 <ul>
-<li>B+树高度最小的情况：所有的叶节点都满，此时的<span class="arithmatex">\(h = \lceil \log_{N}(M)\rceil\)</span> </li>
-<li>最大的情况，所有的叶节点都半满，此时的<span class="arithmatex">\(h=\lfloor \log_{[N/2]}(\frac{M}{2})\rfloor+1\)</span> </li>
+<li>B+树高度最小的情况：所有的叶节点都满，此时的<span class="arithmatex"><span class="MathJax_Preview">h = \lceil \log_{N}(M)\rceil</span><script type="math/tex">h = \lceil \log_{N}(M)\rceil</script></span> </li>
+<li>最大的情况，所有的叶节点都半满，此时的<span class="arithmatex"><span class="MathJax_Preview">h=\lfloor \log_{[N/2]}(\frac{M}{2})\rfloor+1</span><script type="math/tex">h=\lfloor \log_{[N/2]}(\frac{M}{2})\rfloor+1</script></span> </li>
 </ul>
 </li>
 <li>
@@ -3365,12 +3365,12 @@ create assertion credits_constaint check
 <li>记录的存储：</li>
 <li>数据库的记录在block中存储，一个block中有大量的记录存储，有线性存储的，也有使用B+树索引的</li>
 <li>线性存储的记录：<ul>
-<li>假设一条记录的长度位L，block的大小为B，那么一条记录中最多有<span class="arithmatex">\(\lfloor \frac{B}{L}\rfloor\)</span> 条记录</li>
-<li>如果一共有N条记录，一个block中有M条记录，那么一共需要<span class="arithmatex">\(\lceil\frac{N}{M}\rceil\)</span> 个block，而 <span class="arithmatex">\(M=\lfloor \frac{B}{L}\rfloor\)</span> </li>
+<li>假设一条记录的长度位L，block的大小为B，那么一条记录中最多有<span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{B}{L}\rfloor</span><script type="math/tex">\lfloor \frac{B}{L}\rfloor</script></span> 条记录</li>
+<li>如果一共有N条记录，一个block中有M条记录，那么一共需要<span class="arithmatex"><span class="MathJax_Preview">\lceil\frac{N}{M}\rceil</span><script type="math/tex">\lceil\frac{N}{M}\rceil</script></span> 个block，而 <span class="arithmatex"><span class="MathJax_Preview">M=\lfloor \frac{B}{L}\rfloor</span><script type="math/tex">M=\lfloor \frac{B}{L}\rfloor</script></span> </li>
 </ul>
 </li>
 <li>B+树索引block的计算，假设block的大小为B，指针的大小是a，被索引的属性值大小是b<ul>
-<li>要注意指针节点比属性值多一个，所以一个块上的扇出率n(fan-out rate)是<span class="arithmatex">\(\lfloor \frac{B-a}{a+b}\rfloor+1\)</span> </li>
+<li>要注意指针节点比属性值多一个，所以一个块上的扇出率n(fan-out rate)是<span class="arithmatex"><span class="MathJax_Preview">\lfloor \frac{B-a}{a+b}\rfloor+1</span><script type="math/tex">\lfloor \frac{B-a}{a+b}\rfloor+1</script></span> </li>
 <li>n也就是这个B+树的阶数，然后根据公式来估算B+树的高度，其中M应该是作为索引的值可以取到的个数</li>
 </ul>
 </li>
@@ -3398,7 +3398,7 @@ create assertion credits_constaint check
 <li>block written</li>
 </ul>
 </li>
-<li>cost计算的方式：在B个blocks中查询S次所消耗的时间=B*转移到一个block的时间+S*一次查询的时间：<span class="arithmatex">\(B\times t_T+S\times t_S\)</span> 其中<span class="arithmatex">\(t_T\)</span> 表示一次block transfer的时间<ul>
+<li>cost计算的方式：在B个blocks中查询S次所消耗的时间=B*转移到一个block的时间+S*一次查询的时间：<span class="arithmatex"><span class="MathJax_Preview">B\times t_T+S\times t_S</span><script type="math/tex">B\times t_T+S\times t_S</script></span> 其中<span class="arithmatex"><span class="MathJax_Preview">t_T</span><script type="math/tex">t_T</script></span> 表示一次block transfer的时间<ul>
 <li>cost依赖于主存中**缓冲区的大小**：更多的内存可以减少disk access</li>
 <li>通常考虑最坏的情况：只提供最少的内存来完成查询工作</li>
 </ul>
@@ -3413,7 +3413,7 @@ create assertion credits_constaint check
 <p>Algorithm1:线性搜索，查询每个block判断是否满足查询条件</p>
 <ul>
 <li>
-<p>Cost =  br block transfers + 1 seek，其中<span class="arithmatex">\(b_r\)</span> 是关系r中**存储了记录的block的数量** </p>
+<p>Cost =  br block transfers + 1 seek，其中<span class="arithmatex"><span class="MathJax_Preview">b_r</span><script type="math/tex">b_r</script></span> 是关系r中**存储了记录的block的数量** </p>
 </li>
 <li>
 <p>如果通过键来搜索，在找到的时候就停止，则 cost = (br /2) block transfers + 1 seek</p>
@@ -3429,40 +3429,40 @@ create assertion credits_constaint check
 <li>
 <p>Algorithm2: primary index，equality on key，搜索一条记录</p>
 <ul>
-<li><span class="arithmatex">\(cost = (h_i+1)\times(t_T+t_S)\)</span> --- hi是索引的高度</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">cost = (h_i+1)\times(t_T+t_S)</span><script type="math/tex">cost = (h_i+1)\times(t_T+t_S)</script></span> --- hi是索引的高度</li>
 </ul>
 </li>
 <li>
 <p>Algorithm3: primary index, equality on non-key 需要搜索多条记录</p>
 <ul>
 <li>想要的结果会存储在连续的block中(因为有主索引)</li>
-<li><span class="arithmatex">\(cost =h_i (t_T + t_S) + t_S + t_T * b\)</span> 其中b表示包含匹配记录的block总数</li>
-<li>当使用B+树作为索引时可以节约一次seek的时间，<span class="arithmatex">\(cost =h_i (t_T + t_S)+ t_T * b\)</span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">cost =h_i (t_T + t_S) + t_S + t_T * b</span><script type="math/tex">cost =h_i (t_T + t_S) + t_S + t_T * b</script></span> 其中b表示包含匹配记录的block总数</li>
+<li>当使用B+树作为索引时可以节约一次seek的时间，<span class="arithmatex"><span class="MathJax_Preview">cost =h_i (t_T + t_S)+ t_T * b</span><script type="math/tex">cost =h_i (t_T + t_S)+ t_T * b</script></span> </li>
 </ul>
 </li>
 <li>
 <p>算法4：Secondary index</p>
 </li>
 <li>
-<p>用候选主键作为索引检索单条记录 <span class="arithmatex">\(cost = (h_i + 1) \times (t_T + t_S)\)</span> </p>
+<p>用候选主键作为索引检索单条记录 <span class="arithmatex"><span class="MathJax_Preview">cost = (h_i + 1) \times (t_T + t_S)</span><script type="math/tex">cost = (h_i + 1) \times (t_T + t_S)</script></span> </p>
 </li>
 <li>
 <p>用候选主键检索了n条记录(不一定在同一个block上面)</p>
-<p><span class="arithmatex">\(Cost = (h_i + n) \times (t_T + t_S)\)</span> 有时候会非常耗时</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Cost = (h_i + n) \times (t_T + t_S)</span><script type="math/tex">Cost = (h_i + n) \times (t_T + t_S)</script></span> 有时候会非常耗时</p>
 </li>
 </ul>
 <h6 id="432-sortjoincost">4.3.2 sort和join的cost估计<a class="headerlink" href="#432-sortjoincost" title="Permanent link">&para;</a></h6>
 <ul>
 <li>Sort：<strong>external</strong> <strong>sort-merge</strong> 其实类似于ads里面的外部归并排序</li>
 <li>
-<p>M表示内存的大小，<span class="arithmatex">\(b_r\)</span>表示block的数量</p>
+<p>M表示内存的大小，<span class="arithmatex"><span class="MathJax_Preview">b_r</span><script type="math/tex">b_r</script></span>表示block的数量</p>
 <ul>
 <li>基本步骤如下</li>
 <li>create sorted runs</li>
 <li>merge the runs</li>
-<li>需要的merge pass总数 <span class="arithmatex">\([ \log_{M-1}(b_r/M)]\)</span> </li>
+<li>需要的merge pass总数 <span class="arithmatex"><span class="MathJax_Preview">[ \log_{M-1}(b_r/M)]</span><script type="math/tex">[ \log_{M-1}(b_r/M)]</script></span> </li>
 <li>创建和每次run过程中的disk access数量 2*br*</li>
-<li>外部排序中总的disk access次数 <span class="arithmatex">\((2[ \log_{M-1}(b_r/M)]+1)b_r\)</span> </li>
+<li>外部排序中总的disk access次数 <span class="arithmatex"><span class="MathJax_Preview">(2[ \log_{M-1}(b_r/M)]+1)b_r</span><script type="math/tex">(2[ \log_{M-1}(b_r/M)]+1)b_r</script></span> </li>
 </ul>
 </li>
 <li>
@@ -3471,7 +3471,7 @@ create assertion credits_constaint check
 <li>
 <p>nested-loop join</p>
 <ul>
-<li>计算theta-join表达式：<span class="arithmatex">\(r\Join_{\theta} s\)</span> 算法的伪代码如下</li>
+<li>计算theta-join表达式：<span class="arithmatex"><span class="MathJax_Preview">r\Join_{\theta} s</span><script type="math/tex">r\Join_{\theta} s</script></span> 算法的伪代码如下</li>
 </ul>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">tr</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">begin</span><span class="w"> </span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">ts</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">begin</span><span class="w"> </span>
@@ -3481,12 +3481,12 @@ create assertion credits_constaint check
 </span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">end</span>
 </span></code></pre></div>
 <ul>
-<li>block transfer次数: <span class="arithmatex">\(n_r\times b_s+b_r\)</span></li>
-<li>seeks的次数 <span class="arithmatex">\(n_r+b_r\)</span> </li>
+<li>block transfer次数: <span class="arithmatex"><span class="MathJax_Preview">n_r\times b_s+b_r</span><script type="math/tex">n_r\times b_s+b_r</script></span></li>
+<li>seeks的次数 <span class="arithmatex"><span class="MathJax_Preview">n_r+b_r</span><script type="math/tex">n_r+b_r</script></span> </li>
 </ul>
 </li>
 <li>
-<p>block nested-loop join <span class="arithmatex">\(r\Join_{\theta} s\)</span>  </p>
+<p>block nested-loop join <span class="arithmatex"><span class="MathJax_Preview">r\Join_{\theta} s</span><script type="math/tex">r\Join_{\theta} s</script></span>  </p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">Br</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">begin</span><span class="w">     </span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">Bs</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">begin</span><span class="w">         </span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="n">tr</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Br</span><span class="w">  </span><span class="k">do</span><span class="w"> </span><span class="n">begin</span><span class="w">               </span>
@@ -3494,42 +3494,42 @@ create assertion credits_constaint check
 </span></code></pre></div>
 <ul>
 <li>最坏情况的cost</li>
-<li>block transfer <span class="arithmatex">\(b_r\times b_s+b_r\)</span></li>
-<li>seeks <span class="arithmatex">\(2b_r\)</span> </li>
+<li>block transfer <span class="arithmatex"><span class="MathJax_Preview">b_r\times b_s+b_r</span><script type="math/tex">b_r\times b_s+b_r</script></span></li>
+<li>seeks <span class="arithmatex"><span class="MathJax_Preview">2b_r</span><script type="math/tex">2b_r</script></span> </li>
 <li>最好情况的cost</li>
-<li>block transfers <span class="arithmatex">\(b_r+b_s\)</span> with 2 seeks</li>
+<li>block transfers <span class="arithmatex"><span class="MathJax_Preview">b_r+b_s</span><script type="math/tex">b_r+b_s</script></span> with 2 seeks</li>
 <li>优化：使用M-2个block作为blocking unit(M是内存可以容纳的block数量)，此时的</li>
-<li>block transfer次数=<span class="arithmatex">\(\frac{b_r}{M-2}\times b_s+b_r\)</span> </li>
-<li>seek次数= <span class="arithmatex">\(\frac{2b_r}{M-2}\)</span> </li>
+<li>block transfer次数=<span class="arithmatex"><span class="MathJax_Preview">\frac{b_r}{M-2}\times b_s+b_r</span><script type="math/tex">\frac{b_r}{M-2}\times b_s+b_r</script></span> </li>
+<li>seek次数= <span class="arithmatex"><span class="MathJax_Preview">\frac{2b_r}{M-2}</span><script type="math/tex">\frac{2b_r}{M-2}</script></span> </li>
 </ul>
 </li>
 <li>
 <p>Index nested-loop join</p>
 <ul>
 <li>索引一定程度上可以代替file scan</li>
-<li><span class="arithmatex">\(cost=b_r(t_T+t_s)+c\times n_r\)</span> 其中c表示遍历索引和找到所有匹配的s中的tuple所消耗的时间，可以用**一次s上的单个selection来估计s的值** </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">cost=b_r(t_T+t_s)+c\times n_r</span><script type="math/tex">cost=b_r(t_T+t_s)+c\times n_r</script></span> 其中c表示遍历索引和找到所有匹配的s中的tuple所消耗的时间，可以用**一次s上的单个selection来估计s的值** </li>
 </ul>
 </li>
 <li>
 <p>Merge-Join</p>
 <ul>
 <li>只能在natural-join和equal-join中使用</li>
-<li>block transfer的次数=<span class="arithmatex">\(b_r+b_s\)</span>，seek的次数=<span class="arithmatex">\([b_r/b_b]+[b_s/b_b]\)</span> </li>
+<li>block transfer的次数=<span class="arithmatex"><span class="MathJax_Preview">b_r+b_s</span><script type="math/tex">b_r+b_s</script></span>，seek的次数=<span class="arithmatex"><span class="MathJax_Preview">[b_r/b_b]+[b_s/b_b]</span><script type="math/tex">[b_r/b_b]+[b_s/b_b]</script></span> </li>
 </ul>
 </li>
 <li>
 <p>Hash join：使用hash函数进行join</p>
 <ul>
-<li><em>h</em> maps JoinAttrs values to {0, 1, ..., <span class="arithmatex">\(n_h\)</span>},  将两个关系进行比较和同类型的匹配</li>
+<li><em>h</em> maps JoinAttrs values to {0, 1, ..., <span class="arithmatex"><span class="MathJax_Preview">n_h</span><script type="math/tex">n_h</script></span>},  将两个关系进行比较和同类型的匹配</li>
 <li>cost of hash-join</li>
-<li>block transfer: <span class="arithmatex">\(3(b_r+b_s)+4n_h\)</span><ul>
-<li>partition: 读 <span class="arithmatex">\(b_r+b_s\)</span> blocks 写 <span class="arithmatex">\((b_r+b_s)+2n_h\)</span> blocks</li>
-<li>join: 读<span class="arithmatex">\((b_r+b_s)+2n_h\)</span></li>
+<li>block transfer: <span class="arithmatex"><span class="MathJax_Preview">3(b_r+b_s)+4n_h</span><script type="math/tex">3(b_r+b_s)+4n_h</script></span><ul>
+<li>partition: 读 <span class="arithmatex"><span class="MathJax_Preview">b_r+b_s</span><script type="math/tex">b_r+b_s</script></span> blocks 写 <span class="arithmatex"><span class="MathJax_Preview">(b_r+b_s)+2n_h</span><script type="math/tex">(b_r+b_s)+2n_h</script></span> blocks</li>
+<li>join: 读<span class="arithmatex"><span class="MathJax_Preview">(b_r+b_s)+2n_h</span><script type="math/tex">(b_r+b_s)+2n_h</script></span></li>
 </ul>
 </li>
-<li>seeks: <span class="arithmatex">\(2([b_r/b_b]+[b_s/b_b])\)</span> </li>
-<li>如果所有东西都能放进主存里，则<span class="arithmatex">\(n_h=0\)</span> 并且不需要partition</li>
-<li>需要partition的时候 <span class="arithmatex">\(cost=2(b_r+b_s[\log_{M-1}(b_s)-1])+b_r+b_s\)</span> </li>
+<li>seeks: <span class="arithmatex"><span class="MathJax_Preview">2([b_r/b_b]+[b_s/b_b])</span><script type="math/tex">2([b_r/b_b]+[b_s/b_b])</script></span> </li>
+<li>如果所有东西都能放进主存里，则<span class="arithmatex"><span class="MathJax_Preview">n_h=0</span><script type="math/tex">n_h=0</script></span> 并且不需要partition</li>
+<li>需要partition的时候 <span class="arithmatex"><span class="MathJax_Preview">cost=2(b_r+b_s[\log_{M-1}(b_s)-1])+b_r+b_s</span><script type="math/tex">cost=2(b_r+b_s[\log_{M-1}(b_s)-1])+b_r+b_s</script></span> </li>
 </ul>
 </li>
 <li>
@@ -3572,32 +3572,32 @@ create assertion credits_constaint check
 <li>中间结果的数量，用于复杂表达式的优化</li>
 <li>算法的消耗</li>
 <li><strong>等价表达式的规则</strong></li>
-<li>合取选择和选两次等价：<span class="arithmatex">\(\sigma_{\theta_1\and\theta_2}(E)=\sigma_{\theta_1}(\sigma_{\theta_2}(E))\)</span> </li>
-<li>选择两次的顺序可以交换；<span class="arithmatex">\(\sigma_{\theta_1}(\sigma_{\theta_2}(E))=\sigma_{\theta_2}(\sigma_{\theta_1}(E))\)</span> </li>
-<li>嵌套的投影只需要看最外层的：<span class="arithmatex">\(\prod_{L_1}(\prod_{L_2}(\dots(E)))=\prod_{L_1}(E)\)</span> </li>
+<li>合取选择和选两次等价：<span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta_1\and\theta_2}(E)=\sigma_{\theta_1}(\sigma_{\theta_2}(E))</span><script type="math/tex">\sigma_{\theta_1\and\theta_2}(E)=\sigma_{\theta_1}(\sigma_{\theta_2}(E))</script></span> </li>
+<li>选择两次的顺序可以交换；<span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta_1}(\sigma_{\theta_2}(E))=\sigma_{\theta_2}(\sigma_{\theta_1}(E))</span><script type="math/tex">\sigma_{\theta_1}(\sigma_{\theta_2}(E))=\sigma_{\theta_2}(\sigma_{\theta_1}(E))</script></span> </li>
+<li>嵌套的投影只需要看最外层的：<span class="arithmatex"><span class="MathJax_Preview">\prod_{L_1}(\prod_{L_2}(\dots(E)))=\prod_{L_1}(E)</span><script type="math/tex">\prod_{L_1}(\prod_{L_2}(\dots(E)))=\prod_{L_1}(E)</script></span> </li>
 <li>选择可以变成笛卡尔积和theta join</li>
 </ul>
 </li>
 <li>
-<p><span class="arithmatex">\(\sigma_{\theta}(E_1\times E_2)=E_1\Join_{\theta}E_2\)</span> </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta}(E_1\times E_2)=E_1\Join_{\theta}E_2</span><script type="math/tex">\sigma_{\theta}(E_1\times E_2)=E_1\Join_{\theta}E_2</script></span> </p>
 <ul>
-<li><span class="arithmatex">\(\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=E_1\Join_{\theta_1\and\theta_2}E_2\)</span> </li>
-<li>Theta-join和自然连接可以改变连接的两张表的顺序：<span class="arithmatex">\(E_1\Join_{\theta}E_2=E_2\Join_{\theta}E_1\)</span> </li>
-<li>自然连接满足结合律：<span class="arithmatex">\((E_1\Join E_2)\Join E_3=E_1\Join (E_2\Join E_3)\)</span> </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=E_1\Join_{\theta_1\and\theta_2}E_2</span><script type="math/tex">\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=E_1\Join_{\theta_1\and\theta_2}E_2</script></span> </li>
+<li>Theta-join和自然连接可以改变连接的两张表的顺序：<span class="arithmatex"><span class="MathJax_Preview">E_1\Join_{\theta}E_2=E_2\Join_{\theta}E_1</span><script type="math/tex">E_1\Join_{\theta}E_2=E_2\Join_{\theta}E_1</script></span> </li>
+<li>自然连接满足结合律：<span class="arithmatex"><span class="MathJax_Preview">(E_1\Join E_2)\Join E_3=E_1\Join (E_2\Join E_3)</span><script type="math/tex">(E_1\Join E_2)\Join E_3=E_1\Join (E_2\Join E_3)</script></span> </li>
 <li>Theta-join的结合规则</li>
 </ul>
 </li>
 <li>
-<p><span class="arithmatex">\((E_1\Join_{\theta_1} E_2)\Join_{\theta_2\and\theta_3} E_3=E_1\Join_{\theta_1\and\theta_3} (E_2\Join_{\theta_2} E_3)\)</span> </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">(E_1\Join_{\theta_1} E_2)\Join_{\theta_2\and\theta_3} E_3=E_1\Join_{\theta_1\and\theta_3} (E_2\Join_{\theta_2} E_3)</span><script type="math/tex">(E_1\Join_{\theta_1} E_2)\Join_{\theta_2\and\theta_3} E_3=E_1\Join_{\theta_1\and\theta_3} (E_2\Join_{\theta_2} E_3)</script></span> </p>
 <ul>
 <li>选择操作的优化</li>
-<li>当<span class="arithmatex">\(\theta_1\)</span> 中的属性都只出现在E1中的时候：<span class="arithmatex">\(\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=\sigma_{\theta_1}(E_1)\Join_{\theta_2}E_2\)</span> </li>
-<li>当<span class="arithmatex">\(\theta_1,\theta_2\)</span> 分别只包含E1,E2中的属性时：<span class="arithmatex">\(\sigma_{\theta_1\and\theta_2}(E_1\Join_{\theta}E_2)=\sigma_{\theta_1}(E_1)\Join\sigma_{\theta_2}(E_2)\)</span> </li>
+<li>当<span class="arithmatex"><span class="MathJax_Preview">\theta_1</span><script type="math/tex">\theta_1</script></span> 中的属性都只出现在E1中的时候：<span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=\sigma_{\theta_1}(E_1)\Join_{\theta_2}E_2</span><script type="math/tex">\sigma_{\theta_1}(E_1\Join_{\theta_2}E_2)=\sigma_{\theta_1}(E_1)\Join_{\theta_2}E_2</script></span> </li>
+<li>当<span class="arithmatex"><span class="MathJax_Preview">\theta_1,\theta_2</span><script type="math/tex">\theta_1,\theta_2</script></span> 分别只包含E1,E2中的属性时：<span class="arithmatex"><span class="MathJax_Preview">\sigma_{\theta_1\and\theta_2}(E_1\Join_{\theta}E_2)=\sigma_{\theta_1}(E_1)\Join\sigma_{\theta_2}(E_2)</span><script type="math/tex">\sigma_{\theta_1\and\theta_2}(E_1\Join_{\theta}E_2)=\sigma_{\theta_1}(E_1)\Join\sigma_{\theta_2}(E_2)</script></span> </li>
 <li>投影操作和Theta-join的混合运算</li>
 </ul>
 </li>
 <li>
-<p>当θ只包含<span class="arithmatex">\(L_1\or L_2\)</span> 中的属性的时候：<span class="arithmatex">\(\prod_{L_1\or L_2}(E_1\Join_{\theta}E_2)=(\prod_{L_1}(E_1))\Join_{\theta}(\prod_{L_2}(E_2))\)</span> </p>
+<p>当θ只包含<span class="arithmatex"><span class="MathJax_Preview">L_1\or L_2</span><script type="math/tex">L_1\or L_2</script></span> 中的属性的时候：<span class="arithmatex"><span class="MathJax_Preview">\prod_{L_1\or L_2}(E_1\Join_{\theta}E_2)=(\prod_{L_1}(E_1))\Join_{\theta}(\prod_{L_2}(E_2))</span><script type="math/tex">\prod_{L_1\or L_2}(E_1\Join_{\theta}E_2)=(\prod_{L_1}(E_1))\Join_{\theta}(\prod_{L_2}(E_2))</script></span> </p>
 <ul>
 <li>集合运算中的交运算和并运算满足交换律和结合律</li>
 <li>选择操作中有集合的运算时满足分配律(比如进行差运算再选择等价于分别选择再差运算)</li>
@@ -3610,21 +3610,21 @@ create assertion credits_constaint check
 <h6 id="442-cost">4.4.2 cost的估计<a class="headerlink" href="#442-cost" title="Permanent link">&para;</a></h6>
 <ul>
 <li>基本的变量定义</li>
-<li><span class="arithmatex">\(n_r\)</span> 表示关系r中元组的数量(也就是关系r的size)</li>
-<li><span class="arithmatex">\(b_r\)</span> 包含r中元组的block数量</li>
-<li><span class="arithmatex">\(l_r\)</span> r中一个元组的size</li>
-<li><span class="arithmatex">\(f_r\)</span> block factor of r 比如可以选取一个block能容纳的r中元组的平均数量</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">n_r</span><script type="math/tex">n_r</script></span> 表示关系r中元组的数量(也就是关系r的size)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">b_r</span><script type="math/tex">b_r</script></span> 包含r中元组的block数量</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">l_r</span><script type="math/tex">l_r</script></span> r中一个元组的size</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f_r</span><script type="math/tex">f_r</script></span> block factor of r 比如可以选取一个block能容纳的r中元组的平均数量</li>
 <li>V(A, r) 关系r中属性A可能取到的不同的值的数量</li>
-<li>当关系r中的元组都存储在一个文件中的时候 <span class="arithmatex">\(b_r=\frac{n_r}{f_r}\)</span> </li>
+<li>当关系r中的元组都存储在一个文件中的时候 <span class="arithmatex"><span class="MathJax_Preview">b_r=\frac{n_r}{f_r}</span><script type="math/tex">b_r=\frac{n_r}{f_r}</script></span> </li>
 <li>
 <p>选择的估计</p>
 </li>
 <li>
-<p>从r中选择A属性=x的<span class="arithmatex">\(cost = \frac{n_r}{V(A,r)}\)</span> </p>
+<p>从r中选择A属性=x的<span class="arithmatex"><span class="MathJax_Preview">cost = \frac{n_r}{V(A,r)}</span><script type="math/tex">cost = \frac{n_r}{V(A,r)}</script></span> </p>
 </li>
 <li>选择A属性小于x的cost<ul>
-<li><span class="arithmatex">\(cost=0\)</span> if x &lt; min(A,r)</li>
-<li><span class="arithmatex">\(cost=n_r\times \frac{x-min(A,r)}{max(A,r)-min(A,r)}\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">cost=0</span><script type="math/tex">cost=0</script></span> if x &lt; min(A,r)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">cost=n_r\times \frac{x-min(A,r)}{max(A,r)-min(A,r)}</span><script type="math/tex">cost=n_r\times \frac{x-min(A,r)}{max(A,r)-min(A,r)}</script></span></li>
 </ul>
 </li>
 <li>选择A属性大于x，和上面的表达式是对称的</li>
@@ -3632,21 +3632,21 @@ create assertion credits_constaint check
 <p>complex selection 多重选择</p>
 </li>
 <li>
-<p>假设<span class="arithmatex">\(s_i\)</span>是满足条件<span class="arithmatex">\(\theta_i\)</span>的元组的个数</p>
+<p>假设<span class="arithmatex"><span class="MathJax_Preview">s_i</span><script type="math/tex">s_i</script></span>是满足条件<span class="arithmatex"><span class="MathJax_Preview">\theta_i</span><script type="math/tex">\theta_i</script></span>的元组的个数</p>
 </li>
-<li>conjunction <span class="arithmatex">\(cost=n_r\times\frac{s_1\times s_2\times …\times s_n}{n_r^n}\)</span></li>
-<li>disjunction  <span class="arithmatex">\(cost=n_r\times(1-(1-\frac{s_1}{n_r})\times…\times(1-\frac{s_n}{n_r}))\)</span> </li>
-<li>negation <span class="arithmatex">\(cost=n_r-size(\delta_{\theta}(r))\)</span> </li>
+<li>conjunction <span class="arithmatex"><span class="MathJax_Preview">cost=n_r\times\frac{s_1\times s_2\times …\times s_n}{n_r^n}</span><script type="math/tex">cost=n_r\times\frac{s_1\times s_2\times …\times s_n}{n_r^n}</script></span></li>
+<li>disjunction  <span class="arithmatex"><span class="MathJax_Preview">cost=n_r\times(1-(1-\frac{s_1}{n_r})\times…\times(1-\frac{s_n}{n_r}))</span><script type="math/tex">cost=n_r\times(1-(1-\frac{s_1}{n_r})\times…\times(1-\frac{s_n}{n_r}))</script></span> </li>
+<li>negation <span class="arithmatex"><span class="MathJax_Preview">cost=n_r-size(\delta_{\theta}(r))</span><script type="math/tex">cost=n_r-size(\delta_{\theta}(r))</script></span> </li>
 <li>
 <p>join 的估计</p>
 </li>
 <li>
-<p>笛卡尔积的情况下，关系R,S的join最终元组的个数为<span class="arithmatex">\(n_r\times n_s\)</span> </p>
+<p>笛卡尔积的情况下，关系R,S的join最终元组的个数为<span class="arithmatex"><span class="MathJax_Preview">n_r\times n_s</span><script type="math/tex">n_r\times n_s</script></span> </p>
 </li>
 <li>如果R∩S为空，则自然连接的结果和笛卡尔积的结果相同</li>
 <li>如果非空，且R∩S是R的key，则R,S的自然连接最终结果中的元组个数不会超过r</li>
 <li>如果R∩S的结果是S到R的外键，则最后的元组数和s中的元组数相同</li>
-<li>一般情况 自然连接的最终结果的size估计值为<span class="arithmatex">\(\frac{n_r\times n_s}{max(V(A,r),V(A,s))}\)</span>  </li>
+<li>一般情况 自然连接的最终结果的size估计值为<span class="arithmatex"><span class="MathJax_Preview">\frac{n_r\times n_s}{max(V(A,r),V(A,s))}</span><script type="math/tex">\frac{n_r\times n_s}{max(V(A,r),V(A,s))}</script></span>  </li>
 <li>
 <p>其他操作的估计</p>
 </li>
@@ -3671,9 +3671,9 @@ create assertion credits_constaint check
 <p>不同值个数的估计</p>
 </li>
 <li>基于cost的join顺序优化</li>
-<li>n个关系进行自然连接有<span class="arithmatex">\(\frac{(2n-2)!}{(n-1)!}\)</span>种不同的join顺序</li>
+<li>n个关系进行自然连接有<span class="arithmatex"><span class="MathJax_Preview">\frac{(2n-2)!}{(n-1)!}</span><script type="math/tex">\frac{(2n-2)!}{(n-1)!}</script></span>种不同的join顺序</li>
 <li>找到最合适的join-tree的办法：递归地尝试,局部搜索的办法</li>
-<li>Left Deep Join Trees左倾树，当结合方式只考虑左倾树的时候，找到最优解的时间复杂度是<span class="arithmatex">\(O(n2^n)\)</span> </li>
+<li>Left Deep Join Trees左倾树，当结合方式只考虑左倾树的时候，找到最优解的时间复杂度是<span class="arithmatex"><span class="MathJax_Preview">O(n2^n)</span><script type="math/tex">O(n2^n)</script></span> </li>
 <li><strong>Heuristic Optimization</strong> 探索式的优化</li>
 <li>尽早进行selection</li>
 <li>尽早进行projection</li>
@@ -3741,14 +3741,14 @@ create assertion credits_constaint check
 <li><strong>conflict equivalent</strong>：两个调度之间可以通过改变一些不冲突的指令来转换，就叫做冲突等价</li>
 <li><strong>conflict serializable</strong>：冲突可串行化：当且仅当一个调度S可以和一个串行调度等价</li>
 <li><strong>Precedence graph</strong>  前驱图 </li>
-<li>图中的顶点是各个事务，当事务<span class="arithmatex">\(T_i, T_j\)</span> 冲突并且<span class="arithmatex">\(T_i\)</span> 先访问出现冲突的数据的时候，就画一条边<span class="arithmatex">\(T_i\rightarrow T_j\)</span> </li>
+<li>图中的顶点是各个事务，当事务<span class="arithmatex"><span class="MathJax_Preview">T_i, T_j</span><script type="math/tex">T_i, T_j</script></span> 冲突并且<span class="arithmatex"><span class="MathJax_Preview">T_i</span><script type="math/tex">T_i</script></span> 先访问出现冲突的数据的时候，就画一条边<span class="arithmatex"><span class="MathJax_Preview">T_i\rightarrow T_j</span><script type="math/tex">T_i\rightarrow T_j</script></span> </li>
 <li>一个调度是冲突可串行化的当且仅当前驱图是无环图</li>
 <li>对于无环图，可以使用**拓扑逻辑排序**获得一个合适的执行顺序</li>
 </ul>
 </li>
 <li>Recoverable Schedules 可恢复调度</li>
 <li>database must ensure that schedules are recoverable. 不然会出现dirty read</li>
-<li>如果一个事务<span class="arithmatex">\(T_1\)</span>要读取某一部分数据，而<span class="arithmatex">\(T_2\)</span>要写入同一部分的数据，则<span class="arithmatex">\(T_1\)</span>必须在<span class="arithmatex">\(T_2\)</span>commit之前就commit，否则就会造成dirty read</li>
+<li>如果一个事务<span class="arithmatex"><span class="MathJax_Preview">T_1</span><script type="math/tex">T_1</script></span>要读取某一部分数据，而<span class="arithmatex"><span class="MathJax_Preview">T_2</span><script type="math/tex">T_2</script></span>要写入同一部分的数据，则<span class="arithmatex"><span class="MathJax_Preview">T_1</span><script type="math/tex">T_1</script></span>必须在<span class="arithmatex"><span class="MathJax_Preview">T_2</span><script type="math/tex">T_2</script></span>commit之前就commit，否则就会造成dirty read</li>
 <li><strong>Cascading Rollbacks</strong> 级联回滚</li>
 <li>单个事务的fail造成了一系列的事务回滚</li>
 <li><strong>Cascadeless Schedules</strong> 避免级联回滚的调度</li>
@@ -3973,7 +3973,7 @@ create assertion credits_constaint check
 <li>缓冲block是在主存中的block</li>
 <li>磁盘和主存之间的数据移动依赖input和output操作</li>
 <li>
-<p>每个事务<span class="arithmatex">\(T_i\)</span> 在内存中有自己的work-area，并且拷贝了一份该事务要用到的全部数据</p>
+<p>每个事务<span class="arithmatex"><span class="MathJax_Preview">T_i</span><script type="math/tex">T_i</script></span> 在内存中有自己的work-area，并且拷贝了一份该事务要用到的全部数据</p>
 </li>
 <li>
 <p>事务通过read和write操作把数据在自己的工作区域和buffer blocks区间之间进行传递</p>
@@ -4035,8 +4035,8 @@ create assertion credits_constaint check
 <li>
 <p>恢复的过程中有两种操作</p>
 <ul>
-<li>undo：撤回，将事务<span class="arithmatex">\(T_i\)</span> 中已经更新的值变回原本的值</li>
-<li>redo：从事务<span class="arithmatex">\(T_i\)</span> 的第一步开始重新做，将所有值设定为新的值</li>
+<li>undo：撤回，将事务<span class="arithmatex"><span class="MathJax_Preview">T_i</span><script type="math/tex">T_i</script></span> 中已经更新的值变回原本的值</li>
+<li>redo：从事务<span class="arithmatex"><span class="MathJax_Preview">T_i</span><script type="math/tex">T_i</script></span> 的第一步开始重新做，将所有值设定为新的值</li>
 <li>两种操作都需要**idempotent**——也就是操作执行多次和执行一次的效果相同</li>
 <li>undo的条件：日志中包含这个事务的start而不包含commit，即事务进行到一半中断了</li>
 <li>redo的条件：日志中包含这个事务的start和commit</li>
@@ -4091,9 +4091,9 @@ create assertion credits_constaint check
 <li>
 <p>单个事务回滚时的基本操作</p>
 <ul>
-<li>从后往前扫描，当发现记录<span class="arithmatex">\(&lt;T_i,X_i,V_1,V_2&gt;\)</span> 的时候</li>
+<li>从后往前扫描，当发现记录<span class="arithmatex"><span class="MathJax_Preview">&lt;T_i,X_i,V_1,V_2&gt;</span><script type="math/tex"><T_i,X_i,V_1,V_2></script></span> 的时候</li>
 <li>将X的值修改为原本的值</li>
-<li>在日志的末尾写入记录<span class="arithmatex">\(&lt;T_i,X_i,V_1&gt;\)</span> </li>
+<li>在日志的末尾写入记录<span class="arithmatex"><span class="MathJax_Preview">&lt;T_i,X_i,V_1&gt;</span><script type="math/tex"><T_i,X_i,V_1></script></span> </li>
 <li>发现start记录的时候，停止扫描并在日志中写入abort记录</li>
 </ul>
 </li>
@@ -4432,10 +4432,12 @@ create assertion credits_constaint check
 <li>一个简单的案例，对<code>&lt;course_id&gt;..&lt;/course_id&gt;</code>中的内容进行查询</li>
 </ul>
 <p>```xquery
-for <span class="arithmatex">\(x in /university/course
-let %courseid:=\)</span>x/@course_id
-  where <span class="arithmatex">\(x/credits &gt; 3
-return &lt;course_id&gt;{\)</span>courseid}</course_id></p>
+for <span class="arithmatex"><span class="MathJax_Preview">x in /university/course
+let %courseid:=</span><script type="math/tex">x in /university/course
+let %courseid:=</script></span>x/@course_id
+  where <span class="arithmatex"><span class="MathJax_Preview">x/credits &gt; 3
+return &lt;course_id&gt;{</span><script type="math/tex">x/credits > 3
+return <course_id>{</script></span>courseid}</course_id></p>
 <p>// 可以进行如下的化简
 for $x in /university-3/course[credits &gt; 3] <br />
 return <course_id> { $x/@course_id } </course_id>
@@ -4513,9 +4515,7 @@ return <course_id> { $x/@course_id } </course_id>
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

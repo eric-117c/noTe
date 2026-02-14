@@ -1428,7 +1428,7 @@
 </ul>
 <h4 id="12">1.2 基本概念和结构<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
 <ul>
-<li>a <strong>relation r</strong> is a subset of <span class="arithmatex">\(D_1 \times D_2 \times ... \times D_n\)</span></li>
+<li>a <strong>relation r</strong> is a subset of <span class="arithmatex"><span class="MathJax_Preview">D_1 \times D_2 \times ... \times D_n</span><script type="math/tex">D_1 \times D_2 \times ... \times D_n</script></span></li>
 <li>relation 关系: 指的是一张表</li>
 <li>relation is a set of tuples 关系是元组的集合</li>
 <li>tuple 元组: 指的是表的一行</li>
@@ -1437,21 +1437,22 @@
 <li>attribute value: 必须(?)是不可分割的(<strong>atomic</strong>) </li>
 <li>domain 域: 属性允许取值的集合</li>
 <li>relation schema 关系模式</li>
-<li><span class="arithmatex">\(R = (A_1, A_2, ...,A_n)\)</span> </li>
-<li>其中，<span class="arithmatex">\(R\)</span>指代的是一种关系模式， <span class="arithmatex">\(A_i\)</span>是一系列属性，关系模式是对关系的一种**抽象**</li>
-<li><span class="arithmatex">\(r(R)\)</span> 表示关系模式R中的一种关系， table 指代的也是关系</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R = (A_1, A_2, ...,A_n)</span><script type="math/tex">R = (A_1, A_2, ...,A_n)</script></span> </li>
+<li>其中，<span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>指代的是一种关系模式， <span class="arithmatex"><span class="MathJax_Preview">A_i</span><script type="math/tex">A_i</script></span>是一系列属性，关系模式是对关系的一种**抽象**</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">r(R)</span><script type="math/tex">r(R)</script></span> 表示关系模式R中的一种关系， table 指代的也是关系</li>
 <li>举个例子,下面是一个关系模式R</li>
 </ul>
-<div class="arithmatex">\[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \text{Relation Schema: } Student(\underline{ID}, Name, Dept\_Name, Salary)
-\]</div>
+</div>
+<script type="math/tex; mode=display">
+\text{Relation Schema: } Student(\underline{ID}, Name, Dept\_Name, Salary)
+</script>
+</div>
 <ul>
-<li>这是一个关系r,一般画成一张表table,横行代表一个r的一个元素,也就是一个元组tuple</li>
 <li>
-<p>例如，
-$$
-r={{10101, Srinivasan, Comp. Sci.}, {12121, Wu, Finance}, {15151, Mozart, Music}, {22222, Einstein, Physics}}
-$$</p>
+<p>这是一个关系r,一般画成一张表table,横行代表一个r的一个元素,也就是一个元组tuple</p>
 </li>
 <li>
 <table>
@@ -1506,31 +1507,31 @@ $$
 $$</li>
 <li>referecing relation &amp; referenced realtion 引用与被引用关系</li>
 <li>forign key 外键: 用来描述两个表的关系</li>
-<li>如果关系模式<span class="arithmatex">\(R_1\)</span>中的一个属性是另一个关系模式<span class="arithmatex">\(R_2\)</span>中的一个主键，那么这个属性就是<span class="arithmatex">\(R_1\)</span>的一个外键</li>
-<li>a foreign key from <span class="arithmatex">\(r_1\)</span> referencing <span class="arithmatex">\(r_2\)</span></li>
+<li>如果关系模式<span class="arithmatex"><span class="MathJax_Preview">R_1</span><script type="math/tex">R_1</script></span>中的一个属性是另一个关系模式<span class="arithmatex"><span class="MathJax_Preview">R_2</span><script type="math/tex">R_2</script></span>中的一个主键，那么这个属性就是<span class="arithmatex"><span class="MathJax_Preview">R_1</span><script type="math/tex">R_1</script></span>的一个外键</li>
+<li>a foreign key from <span class="arithmatex"><span class="MathJax_Preview">r_1</span><script type="math/tex">r_1</script></span> referencing <span class="arithmatex"><span class="MathJax_Preview">r_2</span><script type="math/tex">r_2</script></span></li>
 </ul>
 <h4 id="14">1.4 关系代数<a class="headerlink" href="#14" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Select 选择：<span class="arithmatex">\(\sigma_{p}(r)=\{t|t\in r \wedge p(t) \}\)</span> </li>
+<li>Select 选择：<span class="arithmatex"><span class="MathJax_Preview">\sigma_{p}(r)=\{t|t\in r \wedge p(t) \}</span><script type="math/tex">\sigma_{p}(r)=\{t|t\in r \wedge p(t) \}</script></span> </li>
 <li>筛选出所有满足条件p(t)的元素t</li>
-<li>Project投影：<span class="arithmatex">\(\prod_{A_1,A_2,\cdots,A_k}(r)\)</span></li>
-<li>运算的结果是原来的关系r中各列只保留属性<span class="arithmatex">\(A_1,A_2,\dots,A_k\)</span> 后的关系</li>
+<li>Project投影：<span class="arithmatex"><span class="MathJax_Preview">\prod_{A_1,A_2,\cdots,A_k}(r)</span><script type="math/tex">\prod_{A_1,A_2,\cdots,A_k}(r)</script></span></li>
+<li>运算的结果是原来的关系r中各列只保留属性<span class="arithmatex"><span class="MathJax_Preview">A_1,A_2,\dots,A_k</span><script type="math/tex">A_1,A_2,\dots,A_k</script></span> 后的关系</li>
 <li>会**自动去掉重复**的元素，因为关系是元组的**集合**(不可以重复)</li>
-<li>Union 并操作：<span class="arithmatex">\(r \cup s=\{t|t\in r \vee t \in s\}\)</span>  </li>
+<li>Union 并操作：<span class="arithmatex"><span class="MathJax_Preview">r \cup s=\{t|t\in r \vee t \in s\}</span><script type="math/tex">r \cup s=\{t|t\in r \vee t \in s\}</script></span>  </li>
 <li>两个关系的属性个数必须相同 </li>
 <li>各属性的domain必须是可以比较大小的</li>
-<li>Set difference 差操作：<span class="arithmatex">\(r-s=\{t| t\in r \wedge t \notin s\}\)</span> </li>
-<li>Cartesian-Product笛卡尔积：<span class="arithmatex">\(r\times s=\{tq| t\in r\wedge q\in s\}\)</span> </li>
+<li>Set difference 差操作：<span class="arithmatex"><span class="MathJax_Preview">r-s=\{t| t\in r \wedge t \notin s\}</span><script type="math/tex">r-s=\{t| t\in r \wedge t \notin s\}</script></span> </li>
+<li>Cartesian-Product笛卡尔积：<span class="arithmatex"><span class="MathJax_Preview">r\times s=\{tq| t\in r\wedge q\in s\}</span><script type="math/tex">r\times s=\{tq| t\in r\wedge q\in s\}</script></span> </li>
 <li>两个关系必须是不相交的，如果相交则需要对结果中重复的属性名进行重命名</li>
 <li>笛卡儿积运算的结果关系中元组的个数应该是rs的个数之乘积</li>
-<li>Renaming重命名：<span class="arithmatex">\(\rho_{X}(E)\)</span> </li>
-<li>将E重命名为x, 让一个关系拥有多个别名，同时X可以写为<span class="arithmatex">\(X(A_1,A_2,\dots,A_n)\)</span> 表示对属性也进行重命名</li>
+<li>Renaming重命名：<span class="arithmatex"><span class="MathJax_Preview">\rho_{X}(E)</span><script type="math/tex">\rho_{X}(E)</script></span> </li>
+<li>将E重命名为x, 让一个关系拥有多个别名，同时X可以写为<span class="arithmatex"><span class="MathJax_Preview">X(A_1,A_2,\dots,A_n)</span><script type="math/tex">X(A_1,A_2,\dots,A_n)</script></span> 表示对属性也进行重命名</li>
 <li>类似于C++中的引用</li>
 <li>扩展运算: 可以用前面的六种基本运算得到</li>
-<li>Intersection 交运算<span class="arithmatex">\(r \cap s=\{t|t\in r \wedge t \in s\}=r-(r-s)\)</span>   </li>
-<li>Natual-Join 自然连接：<span class="arithmatex">\(r\Join s\)</span> <ul>
+<li>Intersection 交运算<span class="arithmatex"><span class="MathJax_Preview">r \cap s=\{t|t\in r \wedge t \in s\}=r-(r-s)</span><script type="math/tex">r \cap s=\{t|t\in r \wedge t \in s\}=r-(r-s)</script></span>   </li>
+<li>Natual-Join 自然连接：<span class="arithmatex"><span class="MathJax_Preview">r\Join s</span><script type="math/tex">r\Join s</script></span> <ul>
 <li>两个关系中同名属性在自然连接的时候当作**同一个属性**来处理</li>
-<li><strong>Theta join</strong> 满足某种条件的合并：<span class="arithmatex">\(r\Join_{\theta} s=\sigma_{\theta}(r\Join s)\)</span>  </li>
+<li><strong>Theta join</strong> 满足某种条件的合并：<span class="arithmatex"><span class="MathJax_Preview">r\Join_{\theta} s=\sigma_{\theta}(r\Join s)</span><script type="math/tex">r\Join_{\theta} s=\sigma_{\theta}(r\Join s)</script></span>  </li>
 </ul>
 </li>
 <li>Outer-Join外部连接，分为左外连接，右外连接，全外连接<ul>
@@ -1542,13 +1543,13 @@ $$</li>
 <li>Full join左右全上，不存在对应的就写成空值</li>
 </ul>
 </li>
-<li>Division除法：<span class="arithmatex">\(r\div s=\{t|t\in\prod_{R-S}(r)\wedge \forall u \in s (tu\in r)\}\)</span><ul>
-<li>如果<span class="arithmatex">\(R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\wedge S=(B_1,\dots,B_n)\)</span> 则有<span class="arithmatex">\(R- S=(A_1,A_2,\dots,A_m)\)</span> </li>
+<li>Division除法：<span class="arithmatex"><span class="MathJax_Preview">r\div s=\{t|t\in\prod_{R-S}(r)\wedge \forall u \in s (tu\in r)\}</span><script type="math/tex">r\div s=\{t|t\in\prod_{R-S}(r)\wedge \forall u \in s (tu\in r)\}</script></span><ul>
+<li>如果<span class="arithmatex"><span class="MathJax_Preview">R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\wedge S=(B_1,\dots,B_n)</span><script type="math/tex">R=(A_1,A_2,\dots,A_m,B_1,\dots,B_n)\wedge S=(B_1,\dots,B_n)</script></span> 则有<span class="arithmatex"><span class="MathJax_Preview">R- S=(A_1,A_2,\dots,A_m)</span><script type="math/tex">R- S=(A_1,A_2,\dots,A_m)</script></span> </li>
 </ul>
 </li>
-<li>Assignment 声明：类似于变量命名用<span class="arithmatex">\(\leftarrow\)</span>  可以把一个关系代数操作进行命名 </li>
+<li>Assignment 声明：类似于变量命名用<span class="arithmatex"><span class="MathJax_Preview">\leftarrow</span><script type="math/tex">\leftarrow</script></span>  可以把一个关系代数操作进行命名 </li>
 <li>Aggregation operations聚合操作</li>
-<li>基本形式：<span class="arithmatex">\(_{G_1,G_2,\dots,G_n}{\mathcal{G}}_{F_1(A_1),\dots,F_n(A_n)}(E)\)</span></li>
+<li>基本形式：<span class="arithmatex"><span class="MathJax_Preview">_{G_1,G_2,\dots,G_n}{\mathcal{G}}_{F_1(A_1),\dots,F_n(A_n)}(E)</span><script type="math/tex">_{G_1,G_2,\dots,G_n}{\mathcal{G}}_{F_1(A_1),\dots,F_n(A_n)}(E)</script></span></li>
 <li>G是聚合的标准，对于关系中所有G值相同的元素进行聚合，F( )是聚合的运算函数</li>
 <li>常见的有SUM/MAX/MIN/AVG/COUNT</li>
 </ul>
@@ -1645,7 +1646,7 @@ $$</li>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">FROM</span><span class="w">    </span><span class="n">r1</span><span class="p">,</span><span class="n">r2</span><span class="p">,...,</span><span class="n">rm</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">WHERE</span><span class="w">   </span><span class="n">P</span><span class="p">;</span>
 </span></code></pre></div></li>
-<li>上述查询等价于<span class="arithmatex">\(\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))\)</span> </li>
+<li>上述查询等价于<span class="arithmatex"><span class="MathJax_Preview">\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))</span><script type="math/tex">\prod_{A_1,A_2,\cdots,A_k}(\sigma_{p}(r_1\times r_2\times \dots\times r_m))</script></span> </li>
 <li>查询的结果是一个关系</li>
 <li>查询的结果会**有重复**，因为实践中去除重复是费时的</li>
 <li>SELECT 部分</li>
@@ -2198,8 +2199,8 @@ WHERE  dept_total.value &gt; dept_total_avg.value;</code></li>
 <li>Decomposition 分解</li>
 <li>Lossy Decomposition 有损分解，尝试连接后发现原有关系部分缺失</li>
 <li>Lossless join 无损分解：<ul>
-<li>R被分解为(<span class="arithmatex">\(R_1,R_2\)</span>)并且<span class="arithmatex">\(R=R_1 \bigcup R_2\)</span></li>
-<li>对于任何关系模式R上的关系r有<span class="arithmatex">\(r=\prod_{R_1}(r)\Join\prod_{R_2}(r)\)</span></li>
+<li>R被分解为(<span class="arithmatex"><span class="MathJax_Preview">R_1,R_2</span><script type="math/tex">R_1,R_2</script></span>)并且<span class="arithmatex"><span class="MathJax_Preview">R=R_1 \bigcup R_2</span><script type="math/tex">R=R_1 \bigcup R_2</script></span></li>
+<li>对于任何关系模式R上的关系r有<span class="arithmatex"><span class="MathJax_Preview">r=\prod_{R_1}(r)\Join\prod_{R_2}(r)</span><script type="math/tex">r=\prod_{R_1}(r)\Join\prod_{R_2}(r)</script></span></li>
 </ul>
 </li>
 <li></li>
@@ -2268,9 +2269,7 @@ WHERE  dept_total.value &gt; dept_total_avg.value;</code></li>
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

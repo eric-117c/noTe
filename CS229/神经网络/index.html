@@ -1053,7 +1053,8 @@
 <ul>
 <li>设定目标: 在 image 里找一只 cat</li>
 </ul>
-<div class="arithmatex">\[
+<div class="arithmatex">
+<div class="MathJax_Preview">
 \text{预期: }\hat{y} = \sigma(\omega x + b)\newline
 $$
 $$
@@ -1064,19 +1065,32 @@ $$
 \omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}\newline
 b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
 \end{cases}
-\]</div>
+</div>
+<script type="math/tex; mode=display">
+\text{预期: }\hat{y} = \sigma(\omega x + b)\newline
+$$
+$$
+\text{损失: }\mathcal{L} = -[ y\log(\hat{y})+(1-y)log(1-\hat{y})] \\
+$$
+$$
+\implies \begin{cases}
+\omega = \omega -\alpha \frac{\partial{\mathcal{L}}}{\partial{\omega}}\newline
+b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
+\end{cases}
+</script>
+</div>
 <ul>
 <li>流程 <ol>
-<li>初始化 <span class="arithmatex">\(\omega , b\)</span></li>
-<li>迭代找到最优的 <span class="arithmatex">\(\omega, b\)</span></li>
-<li>用公式 <span class="arithmatex">\(\hat{y} = \sigma(\omega x + b)\)</span> 预测</li>
+<li>初始化 <span class="arithmatex"><span class="MathJax_Preview">\omega , b</span><script type="math/tex">\omega , b</script></span></li>
+<li>迭代找到最优的 <span class="arithmatex"><span class="MathJax_Preview">\omega, b</span><script type="math/tex">\omega, b</script></span></li>
+<li>用公式 <span class="arithmatex"><span class="MathJax_Preview">\hat{y} = \sigma(\omega x + b)</span><script type="math/tex">\hat{y} = \sigma(\omega x + b)</script></span> 预测</li>
 </ol>
 </li>
 </ul>
 <h4 id="neural-network_1">介绍Neural Network<a class="headerlink" href="#neural-network_1" title="Permanent link">&para;</a></h4>
-<p><span class="arithmatex">\(\text{Neuron} = \text{Linear} +\text{Activition}\)</span>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{Neuron} = \text{Linear} +\text{Activition}</span><script type="math/tex">\text{Neuron} = \text{Linear} +\text{Activition}</script></span>
 - 因此可以把 Logistic Regression 看做 一个neuron</p>
-<p><span class="arithmatex">\(\text{Model} = \text{Architecture} + \text{Parameter}\)</span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\text{Model} = \text{Architecture} + \text{Parameter}</span><script type="math/tex">\text{Model} = \text{Architecture} + \text{Parameter}</script></span></p>
 <h4 id="logistic-regression-2">类比 Logistic Regression （2）<a class="headerlink" href="#logistic-regression-2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>升级目标: 在 image 里找 cat/lion/iguana
@@ -1152,9 +1166,7 @@ b = b - \alpha \frac{\partial{\mathcal{L}}}{\partial{b}}
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>

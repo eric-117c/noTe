@@ -1352,27 +1352,27 @@
 <li>QS1: How long would it take to train a 70 Billion parameter model on 15 Trillion tokens on 1024 H100s?</li>
 <li><strong>公式</strong>：</li>
 <li>训练Transformer需要的FLOPs估算<ul>
-<li><span class="arithmatex">\(\text{Total_FLOPS} = 6 \times P \times T\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Total_FLOPS} = 6 \times P \times T</span><script type="math/tex">\text{Total_FLOPS} = 6 \times P \times T</script></span></li>
 <li>P: number of parameters</li>
 <li>T: number of tokens</li>
 </ul>
 </li>
 <li>显卡集群的算力估算<ul>
-<li><span class="arithmatex">\(\text{Cluster_Performance} = N \times Pk \times MFU\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Cluster_Performance} = N \times Pk \times MFU</span><script type="math/tex">\text{Cluster_Performance} = N \times Pk \times MFU</script></span></li>
 <li>N: number of GPUs</li>
 <li>Pk: Peak performance</li>
 <li>MFU: Model FLOPs Utilization</li>
 </ul>
 </li>
 <li>最终估计时间<ul>
-<li><span class="arithmatex">\(\text{Time} = \frac{Total \_ FLOPS}{Cluster \_ Performance}\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Time} = \frac{Total \_ FLOPS}{Cluster \_ Performance}</span><script type="math/tex">\text{Time} = \frac{Total \_ FLOPS}{Cluster \_ Performance}</script></span></li>
 </ul>
 </li>
 <li>假定 MFU =50% peak performance = 989T FLOPS</li>
 <li>
 <p>答案：</p>
 <ul>
-<li><span class="arithmatex">\(\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D</span><script type="math/tex">\text{Time} =\frac{6 \times 7 \times 10^{10} \times 15 \times 10^{12}}{1024 \times 0.5 \times 989 \times 10^{12}} \approx 12441544 \  S \approx 144 \  D</script></span></li>
 </ul>
 </li>
 <li>
@@ -1383,7 +1383,7 @@
 <li>一个参数对应一个本体，一个梯度，两个中心矩</li>
 <li>Bytes_per_parameter = 16 Bytes</li>
 <li>答案：</li>
-<li><span class="arithmatex">\(\text{Num_Parameters} = \frac{80 \times 10 \times 10^9}{16} = 4 \times 10^{10}\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text{Num_Parameters} = \frac{80 \times 10 \times 10^9}{16} = 4 \times 10^{10}</span><script type="math/tex">\text{Num_Parameters} = \frac{80 \times 10 \times 10^9}{16} = 4 \times 10^{10}</script></span></li>
 </ul>
 <h3 id="memory-accounting">Memory Accounting<a class="headerlink" href="#memory-accounting" title="Permanent link">&para;</a></h3>
 <h4 id="tensor-basic">Tensor Basic<a class="headerlink" href="#tensor-basic" title="Permanent link">&para;</a></h4>
@@ -1503,7 +1503,7 @@
 <h4 id="tensor-elementwise">Tensor Elementwise<a class="headerlink" href="#tensor-elementwise" title="Permanent link">&para;</a></h4>
 <ul>
 <li>nothing special</li>
-<li><code>rsqrt()</code> for every <span class="arithmatex">\(x_i\)</span> return <span class="arithmatex">\(x_{i\_new} = \frac{1}{\sqrt{x_{i\_old}}}\)</span></li>
+<li><code>rsqrt()</code> for every <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> return <span class="arithmatex"><span class="MathJax_Preview">x_{i\_new} = \frac{1}{\sqrt{x_{i\_old}}}</span><script type="math/tex">x_{i\_new} = \frac{1}{\sqrt{x_{i\_old}}}</script></span></li>
 <li><code>triu()</code> takes the upper triangular part of a matrix</li>
 </ul>
 <h4 id="tensor-matrix-mutiplication">Tensor Matrix Mutiplication<a class="headerlink" href="#tensor-matrix-mutiplication" title="Permanent link">&para;</a></h4>
@@ -1558,9 +1558,9 @@
 <ul>
 <li>Linear Model</li>
 <li>N points &emsp; D dimensions &emsp; K ouput_dimensions</li>
-<li>so, FLOPs is <span class="arithmatex">\(2 \times N \times D \times K\)</span></li>
+<li>so, FLOPs is <span class="arithmatex"><span class="MathJax_Preview">2 \times N \times D \times K</span><script type="math/tex">2 \times N \times D \times K</script></span></li>
 <li>
-<p>elementwise operation on <span class="arithmatex">\(m \times n\)</span> matrix requires <span class="arithmatex">\(O(mn)\)</span> FLOPs
+<p>elementwise operation on <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> matrix requires <span class="arithmatex"><span class="MathJax_Preview">O(mn)</span><script type="math/tex">O(mn)</script></span> FLOPs
 <br></p>
 </li>
 <li>
@@ -1575,7 +1575,7 @@
 </li>
 <li>
 <p>MFU: Model FLOPs utilization
-<span class="arithmatex">\(MFU = \frac{actual \_ flop/s}{promised \_ flop/s}\)</span></p>
+<span class="arithmatex"><span class="MathJax_Preview">MFU = \frac{actual \_ flop/s}{promised \_ flop/s}</span><script type="math/tex">MFU = \frac{actual \_ flop/s}{promised \_ flop/s}</script></span></p>
 </li>
 <li>usualy, $MFU \ge 0.5 $ is quite good</li>
 </ul>
@@ -1590,7 +1590,7 @@
 <p>A simple linear model</p>
 </li>
 <li>x --w--&gt; pred_y</li>
-<li>loss function: <span class="arithmatex">\(y = 0.5 (x \times w - 5)^2\)</span></li>
+<li>loss function: <span class="arithmatex"><span class="MathJax_Preview">y = 0.5 (x \times w - 5)^2</span><script type="math/tex">y = 0.5 (x \times w - 5)^2</script></span></li>
 <li>Forward Pass : compute loss
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  <span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
@@ -1608,21 +1608,21 @@
 <p>A 2-layer linear model</p>
 </li>
 <li>x --w--&gt; h1 --w2--&gt; h2 --&gt; loss</li>
-<li><span class="arithmatex">\(x\)</span>&emsp;: <span class="arithmatex">\(B \times D\)</span></li>
-<li><span class="arithmatex">\(w_1\)</span> : <span class="arithmatex">\(D \times D\)</span></li>
-<li><span class="arithmatex">\(w_2\)</span> : <span class="arithmatex">\(D \times K\)</span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>&emsp;: <span class="arithmatex"><span class="MathJax_Preview">B \times D</span><script type="math/tex">B \times D</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span> : <span class="arithmatex"><span class="MathJax_Preview">D \times D</span><script type="math/tex">D \times D</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">w_2</span><script type="math/tex">w_2</script></span> : <span class="arithmatex"><span class="MathJax_Preview">D \times K</span><script type="math/tex">D \times K</script></span></li>
 <li>Functions
 $$
 h_1 = x \times w_1 \
 h_2 = h_1 \times w_2 \
 loss = \mathbb{E}[{h_2}^2]
 $$</li>
-<li>FLOPs in one forward pass = <span class="arithmatex">\(2 \cdot (BD^2 + BDK)\)</span></li>
+<li>FLOPs in one forward pass = <span class="arithmatex"><span class="MathJax_Preview">2 \cdot (BD^2 + BDK)</span><script type="math/tex">2 \cdot (BD^2 + BDK)</script></span></li>
 <li>FLOPs in one backward pass contains :</li>
 <li>h1.grad &emsp; h2.grad</li>
 <li>w1.grad &emsp; w2.grad</li>
 <li>WHY? Check in <strong>Chain Rule</strong></li>
-<li>Answer = <span class="arithmatex">\(2 \cdot (BD^2 + 2 \cdot BDK)\)</span></li>
+<li>Answer = <span class="arithmatex"><span class="MathJax_Preview">2 \cdot (BD^2 + 2 \cdot BDK)</span><script type="math/tex">2 \cdot (BD^2 + 2 \cdot BDK)</script></span></li>
 <li>Generally, one pass has 2 forward FLOPs and 4 backward FLOPs adding up to <strong>6</strong> FLOPs</li>
 </ul>
 <h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h3>
@@ -1698,9 +1698,7 @@ $$</li>
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
     
   </body>
